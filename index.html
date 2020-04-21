@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title> UDPF :Custome Php and Java script Function </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="Custom function,Php function, Js function, Site Tamplets">
+<meta name="Description" content=" Some personilized user define function of Php Java Script which we can use 
+to make our php progaming experience easy and better. As example function are scan_fiels(),
+curl_browser(), querry_data(), path_url(), header_respoance_arry(),querry_arry() and sub_string()">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<meta name="google-site-verification" content="BXMRPVIqBc6klGm5IRLJPPBuroKX8olXUWH0DOMg4so" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
+ <script src="tools.js" ></script>
+<script>
+/////////// syntex hylighter
+    hljs.initHighlightingOnLoad();
+    /////////// syntex hylighter end 
+///////// vav top
+    window.onscroll = function() {hederbar()};
+
+function hederbar() {
+    if ( document.documentElement.scrollTop > 120) {
+        document.getElementById("hb").className = "w3-top  nav-top w3-bar w3-center w3-black";
+    } if (document.documentElement.scrollTop <76 ) {
+        document.getElementById("hb").className = "nav w3-bar w3-center w3-black";
+    }
+}
+///////// vav top end
+//////tablink
+function tabswitcher(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-green";
+}
+//////tablink end
+//random image
+window.onload = function()
+{
+randombg("home",home);
+randombg("hb",hb);
+randombg("hhhhh",header);
+randombg("footer",footer);
+}
+//////////
+
+
+</script>
+<style>
+    .nav-top
+       {
+        max-width:100%;
+        margin: auto;
+        height:auto;
+        overflow:hidden;
+        margin-top:0px;
+        margin-bottom:0px
+        }
+        .nav
+        {
+        max-width:95%;
+        margin: auto;
+        height:auto;
+        overflow:hidden;
+        margin-top:1px;
+        margin-bottom:0px
+        }
+</style>
+</head>
+
+<body id="body" class="mycss-bg"> 
+  
+  <!-- header-->
+<header id="hhhhh" class="mycss-big-container" style="max-width:95%; height:120px;margin-top:0px; margin-bottom:0px; background-color:rgba(10, 11, 11, 0.24);">
+<img src="http://udpf.dx.am/logo.png" width="75px" height="76px">
+  <p class="mycss-cloud-text"  >UDPF: User Define Presonal Functions</p>
+</header>
+<!-- header End -->
+<!-- header-->
+      <div id="hb" class=" w3-bar nav w3-center w3-black"> 
+    <button class="w3-bar-item w3-button tablink w3-green" onclick="tabswitcher(event,'home')">Home</button>
+    <button class="w3-bar-item w3-button tablink"        onclick="tabswitcher(event,'php')">PHP</button>
+    <button class="w3-bar-item w3-button tablink"        onclick="tabswitcher(event,'js')">JS</button>
+    <button class="w3-bar-item w3-button tablink"        onclick="tabswitcher(event,'youtube')">Youtube</button>
+    <button class="w3-bar-item w3-button tablink"        onclick="tabswitcher(event,'jiosaavanpro')">JIOSaavan-Pro</button>
+    <button class="w3-bar-item w3-button tablink"        onclick="tabswitcher(event,'hungamapro')">Hungama-Pro</button>
+</div>
+<!--                     home tab                        -->
+<!-- content -->
+<div id="home" class="mycss-big-container tab w3-gray w3-text-white" style="max-width:95%; height:auto; margin-top:5px; margin-bottom:05px;">
+
+<!-- content Start--> 
+
+  <!--    about us-->
+  <h4><i><b>About Us</b></i></h4>
+  <p>
+    <b>UDPF</b>  stand for " <b>User Defined Personal Functions</b> " . On this portal there are some Php and Java Script function . In the future we will also make to avalable some more cool user define function(s) . Really I make sure you will love this functions.
+  </p>
+    <!--    about us end -->
+       <!--    download-->   
+     <h4><i><b>Download</b></i></h4>
+         <p><i><b>Php</b></i></p>
+           <b >Github:</b><a  href="https://github.com/udpf/php_function_tools">Download</a><br>
+           <b >Inserver</b><a  href="http://wbut.co.nf/php_function/tools">Download</a><br>
+             <br>
+        <p><i><b>Js:</b></i></p>
+        <b >Github:</b><a  href="https://github.com/udpf/js_function_tools">Download</a><br>
+        <b >Inserver</b><a  href="http://wbut.co.nf/js_function/tools.js">Download</a><br>
+             <br>
+        <p><i><b>Youtube:</b></i></p>
+        <b >Github:</b><a  href="https://github.com/udpf/youtube_function">Download</a><br>
+        <b >Inserver</b><a  href="http://wbut.co.nf/js_function/youtube.js">Download</a><br>
+        
+<!--    php function list-->
+    <h4><i><b>List of Php Function(s)</b></i></h4>
+ <div class="w3-container">
+    <div class="w3-half" >
+      <li>php_browser()</li>
+      <li>scan_files()</li>
+      <li>query_data()</li>
+      <li>path_url()</li>
+      <li>header_responce_arry()</li>
+      <li>query_arry()</li>
+      <li> sub_string()</li>
+   </div>
+</div>
+   <!--    php function list end -->
+   
+     <!--    js function list-->
+    <h4><i><b>List of Js Function(s)</b></i></h4>
+    <div class="w3-container">
+    <div class="w3-half" >
+      <li>js_browser()</li>
+      <li>auto_refresh()</li>
+      <li>var_dum()</li>
+      <li>print_r()</li>
+      <li>echo()</li>
+      <li>json_encode()</li>
+      <li>json_decode()</li>
+      <li>query_data()</li>
+
+    </div>
+    <div class="w3-half" >
+       <li>count()</li>
+      <li>sub_string()</li> 
+      <li>isset()</li>
+      <li>urlencode()</li>
+      <li>urldecode()</li>
+      <li>parse_str()</li>
+      <li>explode()</li>
+    </div>
+    </div>
+     
+   <!--    js function list end -->
+   
+   <!--    Contact -->
+     <h4><i><b>Contact Us</b></i></h4>
+  <p>
+    For any kind of help related to progaming (php and js only) and Queary related to this function(s) you can contact me by- <br>
+    
+    <b>Email :</b> admin@udpf.dx.am <br>
+    
+  </p>
+ <!--    Contact end -->
+ <!-- content start End-->
+</div>
+ <!-- content End -->
+ <!--                       home tab    end                    --> 
+ 
+ 
+ <!--                       php tab                        -->
+ <!-- content -->
+<div id="php" class="mycss-big-container tab" style="max-width:95%; height:auto; margin-top:0px; margin-bottom:05px;display:none;">
+<!-- content Start-->
+
+<div>
+<h4><i><b>How To Use</b></i></h4>
+
+<p>There are three methods to use it.</p>
+
+  <p><i><b>First method</b></i></p> 
+          <p>If you have acess to "php.ini" file.<br>
+              Then enable url file include. if it ebabled then ok.<br>
+              By default it is off.<br>
+              Enable it by  adding "allow_url_include=1;" text to "php.ini" page.<br>
+              After that include  "include "http://wbut.co.nf/php_function/tools";" in script(s) page.</p>
+              
+         <pre>
+         <code>
+    	&lt;? php
+         include "http://wbut.co.nf/php_function/tools";
+         
+         
+         /*
+         
+         Rest Of Code
+         
+         */
+         ?&gt;
+         </code>
+          </pre>
+          
+    <p><i><b>Second Method</b></i></p>  
+
+       <p> Download script from "https://github.com/udpf/php_function_tools" .<br>
+         Upload to your server.<br>
+         After that include  "include "/location/tools.php";" in script(s) page.<br>
+         Use is as local function.</p>
+                  <pre>
+                  <code>
+    	&lt;? php
+         include "/php_function/tools";
+        ?&gt;
+         </code>
+          </pre>
+          
+      <p><i><b>Third Method</b></i></p>
+
+        
+         <p>This is simple method to use .<br>
+         Copy the required functon and paste it in your script  and use it as we use user define function.
+         </p>
+                  <pre>
+                  <code>
+        &lt;? php
+         function sub_string($op,$top,$top_no,$botom,$botom_no)
+                 {
+          $Sp1=strpos($op,$top)+$top_no;
+           $ss1=substr($op,$Sp1);
+            ///
+          $Sp2=strpos($ss1,$botom)-$botom_no;
+          return substr($ss1,0,$Sp2);
+                  }
+          echo sub_string($op,$top,$top_no,$botom,$botom_no);
+          ?&gt;
+          </code>
+          </pre>
+</div>
+
+<h4><i><b>Function(s)</b></i></h4>
+
+<div>
+<p><i><b>1. scan_files($rootDir)</b></i></p>
+<p> Return -  Array </p>
+<p>$rootDir -string- Name of the directory from where we want to  scan folder. Only its subfolder will we scaned. </p>
+<pre>
+<code>
+&lt;? php
+function scan_files($rootDir, $allData=array())
+
+{
+    // set filenames invisible if you want
+    $invisibleFileNames = array(".", "..","bhuv.mp4", ".htaccess", ".htpasswd");
+    // run through content of root directory
+    $dirContent = scandir($rootDir);
+    foreach($dirContent as $key => $content)
+  {
+        // filter all files not accessible
+        $path = $rootDir.'/'.$content;
+        if(!in_array($content, $invisibleFileNames))
+        {
+            // if content is file & readable, add to array
+            if(is_file($path) && is_readable($path)) 
+            {
+                // save file name with path
+                $allData[]["name"] = $content;
+                $allData[]["url"] = $path;
+            // if content is a directory and readable, add path and name
+            }
+            elseif(is_dir($path) && is_readable($path)) 
+            {
+                // recursive callback to open new directory
+                $allData[$content]= scan_files($path, $allData[$content]);
+            }
+        }
+    }
+    return $allData;
+}
+?&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;? php  
+include "/php_function/tools";
+print_r( scan_files("./"));      //same folder in which function is run in page.
+//print_r( scan_files("../"));  // one step back folder function cantain in script.
+//print_r(scan_files("/storage/emulated/0/www/"));  //  it will scan leaving "www" folder.
+//print_r(scan_files("/storage/emulated/0/www"));  //  it will scan including "www" folder.
+Array
+(
+    [0] => Array
+        (
+            [name] => ajktv
+        )
+
+    [1] => Array
+        (
+            [url] => .//ajktv
+        )
+
+    [cookies] => Array
+        (
+            [0] => Array
+                (
+                    [name] => cookie.txt
+                )
+
+            [1] => Array
+                (
+                    [url] => .//cookies/cookie.txt
+                )
+
+        )
+
+    [2] => Array
+        (
+            [name] => newfile.php
+        )
+
+    [3] => Array
+        (
+            [url] => .//newfile.php
+        )
+
+)
+?&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>2. curl_browser($url, "post", $postdata, $header, "proxy", "IN", "cookies")</b></i></p>
+<p> curl_browser($url, "$request_method", $postdata, $header, "proxy", "IN", "cookies", "data_type")</p>
+<p> Return -  Array, string </p>
+<p>$url -string- url (full url for external url  relative url for local url)</p>
+<p>$request_method - string-get, post (presently only two method get and post are supported). for get we can leave blank. </p>
+<p>$postdata -string- In post request provide post data value
+ in get request live it blank</p>
+<p>$header -Array-To use default header leave it blank. or to use customized header provide header</p>
+<p>proxy -string_constant- use woed "proxy"  to make connection throught proxy server. leve it blank to to not use proxy server</p>
+<p>"In" -string_constant- if we thave enable proxy than only it is valid aotrher wise it is invalid to use. if it is blank by default proxy server is india. else  we can use didfferent resion as UK,US/NP etc. </p>
+<p>cookies -string_constant or array- this last is optional parameter</p>
+<p>$return -string_constant-
+ errorno- return error no.
+ errormsg- error message
+ info- give request info
+ conteny_info- content + info
+ header_responce- responce header
+ unknown- we can use it in future for other function if requered.
+</p>
+<pre>
+<code>
+    &lt;? php
+function browser($data_arry)
+{ 
+  if(!empty($data_arry['proxy_region']))
+  {
+$proxy_arry=proxy($data_arry['proxy_region']);
+$data_arry['ip']=$proxy_arry[0]['ip'];
+$data_arry['port']=$proxy_arry[0]['port'];  		  		
+  } 
+  else
+  {
+$data_arry['ip']="";
+$data_arry['port']=""; 
+  }
+  // cookies folder create
+  if(!is_dir("cookies"))
+  mkdir("cookies");
+$cookies_file= "cookies/cookie.txt";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $data_arry['url']);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_PROXY, $data_arry['ip']);
+curl_setopt($ch, CURLOPT_PROXYPORT, $data_arry['port']);
+curl_setopt($ch, CURLOPT_COOKIEJAR, $cookies_file);
+curl_setopt($ch, CURLOPT_COOKIEFILE, $cookies_file);
+$post=(isset($data_arry['post'])) ? 1: 0;
+if(!empty($post))
+{
+curl_setopt($ch, CURLOPT_POST,$post);
+curl_setopt($ch, CURLOPT_POSTFIELDS,$data_arry['postdata']);
+}
+curl_setopt($ch, CURLOPT_HTTPHEADER, $data_arry['headers']);
+
+if($data_arry['return']=="errorno")
+{
+$err = curl_errno( $ch ); 
+$output=$err ;
+}
+else if($data_arry['return']=="errormsg")
+{
+$errmsg  = curl_error( $ch );
+$output=$errmsg;
+}
+else if($data_arry['return']=="info")
+{
+$info = curl_getinfo( $ch );
+$output=$info;
+}
+else if($data_arry['return']=="conteny_info")
+{
+$body= curl_exec ($ch);
+$info = curl_getinfo( $ch );
+$output=$info;
+}
+
+else if($data_arry['return']=="header_responce")
+{
+curl_setopt($ch, CURLOPT_HEADER, true); curl_setopt($ch, CURLOPT_NOBODY, true);
+$header= curl_exec ($ch);
+$output=$header;
+}
+else
+{
+$server_output = curl_exec ($ch);
+$output=$server_output;
+}
+curl_close ($ch);
+return $output;
+}
+
+//curl_browser
+function curl_browser($url,$methodtype=null,$postdata=null,$headers=null,$proxy=null,$proxy_region=null,$cookie=null,$return="webpage")
+{
+$z['url']=$url;	
+if($methodtype=='post')
+{$z['postdata']=$postdata;
+$z['post']=1;}
+else
+$z['postdata']=null;
+if($proxy=='proxy')
+{
+	if($proxy_region==null)
+	$z['proxy_region']="IN";
+    else
+	$z['proxy_region']=$proxy_region;
+}
+if($cookie=='cookie')
+$z['cookiefile']=$cookie;
+if($headers==null)
+{
+$z['headers']=[
+'User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+'Accept-Encoding: identity',
+'Connection: close',
+  ];
+}
+else
+{$z['headers']=$headers;}
+
+//return
+$z['return']=$return;
+
+return browser($z);
+}
+
+#proxy
+function proxy($region='IN')
+{
+$url="https://kingproxies.com/api/v2/proxies.json?alive=1&ampt;country_code=".$region."&ampt;key=freesample&ampt;limit=5&ampt;protocols=&ampt;type=elite" ;
+$json=curl_browser($url,"","","","","","cookie");
+$arry=json_decode($json,1);
+return $arry=$arry['data']['proxies'];
+}
+#curl_browser($url,"","","","","","", "");
+#curl_browser($url,"post","postdata","headers arry ","proxy","IN","cookie",returntype(string) optional);
+?&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>3. query_data($id)</b></i></p>
+<p> Return - string </p>
+<p>$id -string-pass string to get "get" data from  url. </p>
+<pre>
+<code>
+&lt;? php
+ function query_data($id)
+ {
+	 return urldecode($_GET[$id]);
+ }
+ ?&gt;
+</code>
+</pre>
+<p>Example</p>
+ <pre>
+ <code>
+ &lt;? php
+ include "/php_function/tools";
+ url="http://ecample.com/hfghgfd/hfghd.php?ram=13&ampt;shyam=25";
+  echo query_data("ram");
+  // ans-13
+  echo query_data("shyam");
+  // ans-13
+    ?&gt;
+   </code>
+ </pre>
+
+</div>
+<div>
+<p><i><b>4.  path_url($url)</b></i></p>
+<p> Return -string </p>
+<p>$url -string-pass url as string. </p>
+<p> return url path only</p>
+<pre>
+<code>
+   &lt;? php 
+   include "/php_function/tools";
+function path_url($url)
+{
+$arry=parse_url($url);
+$url=$arry['scheme']."://".$arry['host'].$arry['path'];
+$basename=basename($url);
+return str_replace($basename,'',$url);
+}
+?&gt;
+</code>
+</pre>
+
+
+<p>Example</p>
+ <pre>
+<code>
+&lt;? php
+include "/php_function/tools";
+  $url="http://ecample.com/hfghgfd/hfghd.php?ram=13&amp;amp";
+  echo path_url($url);
+  // Ans- "http://ecample.com/hfghgfd/"
+       ?&gt;
+   </code>
+ </pre>
+
+</div>
+
+<div>
+<p><i><b>5.  header_responce_arry($output)</b></i></p>
+<p> Return -Array</p>
+<p>$return - -string- pass responce header as string. </p>
+<p>pure plane responce data top arry conmversion</p>
+<pre>
+<code>
+    &lt;? php
+function header_responce_arry($output)
+{
+$headers=array();
+$data=explode("\n",$output);
+$headers['status']=$data[0];
+array_shift($data);
+foreach($data as $part){
+    $middle=explode(":",$part);
+    $headers[trim($middle[0])] = trim($middle[1]);
+}
+return $headers;
+}
+//$headers=header_responce_arry($output);
+//print_r($headers);
+//var_dump($headers);
+    ?&gt;
+</code>
+</pre>
+<p>Example</p>
+ <pre>
+ <code>
+     &lt;? php
+     include "/php_function/tools";
+ $output=curl_browser("http://google.com","","","","","","","header_responce");
+  print_r(header_responce_arry($output));
+/*   Ans-
+   
+Array
+(
+    [status] => HTTP/1.1 302 Found
+    [Cache-Control] => private, max-age=0
+    [Content-Type] => text/html; charset=UTF-8
+    [Referrer-Policy] => no-referrer
+    [Location] => https
+    [Content-Length] => 285
+    [Date] => Wed, 21 Feb 2018 09
+    [Connection] => close
+    [] => 
+    [HTTP/1.1 302 Found] => 
+    [Server] => gws
+    [X-XSS-Protection] => 1; mode=block
+    [X-Frame-Options] => SAMEORIGIN
+    [Set-Cookie] => NID=124=fY8BrgiLnGzB7MAEe2bVYTeK7Rdgrdp66kOxnGjCbG9AltuY_v9nhJ0rweidKuqrUrnUOsHGHSCwWc6RsFLOurRixfG8SpZwS2M3KFrieVA8DahgvogWwSTdt5R2yY1TgINCiW8; expires=Thu, 23-Aug-2018 09
+    [HTTP/1.1 200 OK] => 
+    [Expires] => -1
+    [Strict-Transport-Security] => max-age=3600
+    [P3P] => CP="This is not a P3P policy! See g.co/p3phelp for more info."
+    [Alt-Svc] => hq="
+    [Accept-Ranges] => none
+    [Vary] => Accept-Encoding
+)
+*/
+    ?&gt;
+</code>
+ </pre>
+</div>
+
+<div>
+<p><i><b>6.  query_arry($query)</b></i></p>
+<p> Return -Array</p>
+<p>$querry - string- query as string. </p>
+<p> it will give arry of querry </p>
+<pre>
+<code>
+function query_arry($query)
+{
+$data=explode("&",$query);
+foreach($data as $part){
+    $arry=explode("=",$part);
+    $arryf[$arry[0]]=$arry[1];
+}
+
+return $arryf;
+}
+</code>
+</pre>
+<p>Example</p>
+ <pre>
+ <code>
+ &lt;?php
+ include "/php_function/tools";
+  print_r(query_arry("ram=13&#38;shyam=25"));
+   Ans-
+   Array
+(
+    [ram] => 13
+    [shyam] => 25
+)
+    ?&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i>7. sub_string($op,$top,$top_no,$botom,$botom_no)<b></b></i></p>
+<p> Return -string</p>
+<p>$op -string- pass string data from u want sub string. </p>
+<p>$top -string- pass string data from where u want to string. </p>
+<p>$top_no-string- number to correct the string. </p>
+<p>$bottom -string- pass string data from upto  u want to string. </p>
+<p>$bottom_no-string- number to correct the string. </p>
+<p></p>
+<pre>
+<code>
+   &lt;?php
+ function sub_string($op,$top,$top_no,$botom,$botom_no)
+ {
+ $Sp1=strpos($op,$top)+$top_no;
+$ss1=substr($op,$Sp1);
+///
+$Sp2=strpos($ss1,$botom)-$botom_no;
+return substr($ss1,0,$Sp2);
+ }
+  ?&gt;
+ </code>
+</pre>
+<p>Example</p>
+ <pre>
+ <code>
+        &lt;?php
+        include "/php_function/tools";
+ $op='string- number to correct the string';
+  echo sub_string($op,'ing',3,'the',0);
+  /* Ans-
+   - number to correct 
+   */
+     ?&gt;
+   </code>
+</pre>
+</div>      
+        
+<!-- content start End-->
+</div>
+ <!-- content End -->
+  <!--                            php tab  end                        -->
+  
+    <!--                            js tab                         -->
+  <!-- content -->
+<div id="js" class="mycss-big-container tab" style="max-width:95%; height:auto; margin-top:0px; margin-bottom:05px;display:none;">
+<!-- content Start--> 
+ 
+ 
+<div>
+<h4><i><b>How To Use</b></i></h4>
+<p>There are three methods to use it.</p>
+
+    <p><i><b>First method</b></i></p>
+      <p> Add following code in your head of the page </p>
+      <pre><code>
+        &lt;script src="http://wbut.co.nf/js_function/tools.js" &gt;&lt;/script&gt;
+      </code></pre>
+      
+        <p><i><b> Second Method</b></i></p>
+        <p>
+         Download script from "https://github.com/udpf/js_function_tools" . <br>
+         Upload to your server.<br>
+         After that add following code in your head of the page.<br>
+         Use function(s) as local function.<br>
+         </p>
+      <pre><code>
+        &lt;script src="/your_file_location/tools.js" &gt;&lt;/script&gt;
+      </code></pre>
+      
+   <p><i><b>Third Method</b></i></p>
+      <p>
+         This is simple method to use .<br>
+         Copy the required functon and paste it in your script page and use it as we use user define function.
+      </p>
+              <p>Example</p> 
+                  <pre>
+                  <code>
+     &lt;script&gt;
+              function sub_string (ot,topstring,topno,bottomstring,bottomno)
+                        {
+                      var pos1=ot.indexOf(topstring)+topno;
+                      var ot1=ot.substr(pos1);
+                      var pos2=ot1.indexOf(bottomstring)-bottomno;
+                      var json= ot1.substr(0,pos2);
+                      return json;
+                        }
+     &lt;/script&gt;
+          </code>
+          </pre>
+          
+</div>
+
+<h4><i><b>Function(s)</b></i></h4>
+
+<div>
+<p><i><b>1.js_browser("url(string)" , "get(method)"," postdata(string)", "header(string)", "datatype(string)")</b></i></p>
+<p> <b>Return - </b> String</p>
+<p> datatype- webpage(default)- return body of page(string)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp;header  - return all header (array)
+</p>
+
+<pre>
+<code>
+       &lt;script&gt;
+function browser(arry)
+ { 
+     var xhr, i;
+  if (window.XMLHttpRequest)
+  {
+  xhr= new XMLHttpRequest();
+  } 
+  else
+  {
+    // code for older browsers
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+              // for get request
+    if(arry['method']=='get')
+    {
+      xhr.open('GET',arry['url'], false);
+    }
+     // for post request
+    if(arry['method']=='post')
+    {
+     xhr.open('POST',arry['url'],false);
+    }
+    if(arry['method']=='options')
+    {
+     xhr.open('OPTIONS',arry['url'], false);
+    }       
+    
+    // set header
+        var aHeaders=arry['header'],ram,ramm;
+             for(var i in aHeaders )
+                   {
+                       ram= i;
+                       ramm= aHeaders[i];
+               xhr.setRequestHeader(ram, ramm );
+                   }
+                   
+   if(arry['method']=='get')               
+     xhr.send();
+  if(arry['method']=='post')
+    xhr.send(arry['postdata']);
+    if(arry['method']=='options')
+         xhr.send();
+         
+      if(xhr.readyState ===4)
+              {
+                  if(arry['datatype']=="webpage")
+                  {
+                     return xhr.response;
+                  }
+               if(arry['datatype']=="header")
+                    {
+                      return xhr.getAllResponseHeaders();
+                    } 
+              }
+              
+ }
+ 
+    function js_browser(url,method="get",postdata,header="",datatype="webpage")
+    {
+        var arryy=Array;
+        arryy['url']=url;
+        arryy['method']=method;
+        arryy['postdata']=postdata;
+        arryy['datatype']=datatype;
+        if(header=="")
+          {
+       arryy['header']={
+            };
+                }
+        else
+        {
+            arryy['header']=header;
+        }
+        
+      return browser(arryy);  
+    }
+ 
+    &lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+       
+ var url,;
+           url="http://www.youtube.com/get_video_info?video_id=DRYcz5pt5oc"";
+           header={
+           'Key': '12345678'
+           };
+           postdata="vdevid=5&vtenantId=3&vstreamname=Yupp ";
+           
+           echo (js_browser(url));    // output webcontent  .                           //echo () in another user define to output the text.
+        //   js_browser(url,"get","","","");       // output webcontent.            
+        //   js_browser(url,"get","","header",""); // output webcontent.  
+        //   js_browser(url,"get","","header","header"); // output responce header as text. 
+        
+        // post request
+        
+        //   js_browser(url,"post",postdata,"","");      // output webcontent  .            
+        //   js_browser(url,"post",postdata,"header",""); // output webcontent.  
+        //   js_browser(url,"post",postdata,"header","header"); // output webcontent.  
+
+ ////////////output  
+ 
+ /*
+ 
+ hi bhuvan.
+ */
+        
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>2.auto_refresh()</b></i></p>
+<p> <b>Return - </b> No return</p>
+<p> The page will be reloded in which it it called</p>
+<pre>
+<code>
+&lt;script&gt;
+function auto_refresh()
+{
+   location.reload(true);
+}
+
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>3.echo(string,display="write",idname)</b></i></p>
+<p> <b>Return - </b> No return</p>
+<p> The page output direct to the document</p>
+<pre>
+<code>
+&lt;script&gt;
+function echo(string,display="write",idname)
+{
+if(display==="write")
+document.write(string);
+if(display==="id")
+ document.getElementById(idname).innerHTML =string;
+ if(display==="class")
+ document.getElementsByClassName(idname).innerHTML =string;
+}
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>4. var_dump(v, howDisplay, recursionLevel)</b></i></p>
+<p> <b>Return - </b> No return</p>
+<p> howDisplay-optional </p>
+<p> recursionLevel-optional </p>
+<p> The page will directly output to document the help of echo function </p>
+<pre>
+<code>
+&lt;script&gt;
+function repeatString(str, num) {
+    out = '';
+    for (var i = 0; i < num; i++) {
+        out += str; 
+    }
+    return out;
+}
+
+function var_dump(v, howDisplay, recursionLevel) {
+    howDisplay = (typeof howDisplay === 'undefined') ? "body" : howDisplay;
+    recursionLevel = (typeof recursionLevel !== 'number') ? 0 : recursionLevel;
+
+
+    var vType = typeof v;
+    var out = vType;
+
+    switch (vType) {
+        case "number":
+            /* there is absolutely no way in JS to distinguish 2 from 2.0
+            so 'number' is the best that you can do. The following doesn't work:
+            var er = /^[0-9]+$/;
+            if (!isNaN(v) && v % 1 === 0 && er.test(3.0))
+                out = 'int';*/
+        case "boolean":
+            out += ": " + v;
+            break;
+        case "string":
+            out += "(" + v.length + '): "' + v + '"';
+            break;
+        case "object":
+            //check if null
+            if (v === null) {
+                out = "null";
+
+            }
+            //If using jQuery: if ($.isArray(v))
+            //If using IE: if (isArray(v))
+            //this should work for all browsers according to the ECMAScript standard:
+            else if (Object.prototype.toString.call(v) === '[object Array]') {  
+                out = 'array(' + v.length + '): {\n';
+                for (var i = 0; i < v.length; i++) {
+                    out += repeatString('   ', recursionLevel) + "   [" + i + "]:  " + 
+                        var_dump(v[i], "none", recursionLevel + 1) + "\n";
+                }
+                out += repeatString('   ', recursionLevel) + "}";
+            }
+            else { //if object    
+                sContents = "{\n";
+                cnt = 0;
+                for (var member in v) {
+                    //No way to know the original data type of member, since JS
+                    //always converts it to a string and no other way to parse objects.
+                    sContents += repeatString('   ', recursionLevel) + "   " + member +
+                        ":  " + var_dump(v[member], "none", recursionLevel + 1) + "\n";
+                    cnt++;
+                }
+                sContents += repeatString('   ', recursionLevel) + "}";
+                out += "(" + cnt + "): " + sContents;
+            }
+            break;
+    }
+
+    if (howDisplay == 'body') {
+       // var pre = document.createElement('pre');
+       // pre.innerHTML = out;
+       // document.body.appendChild(pre)
+       echo (out);
+    }
+    else if (howDisplay == 'alert') {
+        alert(out);
+    }
+
+    return out;
+}
+
+&lt;/script&gt;
+</code>
+</pre>
+</div> 
+
+<div>
+<p><i><b>5.print_r(arry)</b></i></p>
+<p> <b>Return - </b> No return</p>
+<p> The page output direct to the document</p>
+<pre>
+<code>
+&lt;script&gt;
+ function print_r(arry){
+     echo ("<pre>")
+     var_dump(arry);
+     echo("</pre>");
+ }
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>6. json_encode(op)</b></i></p>
+<p> <b>Return - </b> json</p>
+<p> <b>op</b>Object</p>
+<p> Get array  data and retun json </p>
+<pre>
+<code>
+&lt;script&gt;
+ function json_encode(op)
+   {
+      return  JSON.stringify(op);
+   }
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>7. json_decode(op)</b></i></p>
+<p> <b>Return - </b> Object/array</p>
+<p> <b>op</b>Object</p>
+<p> Get json as data and retun array/object </p>
+<pre>
+<code>
+&lt;script&gt;
+   function json_decode(op)
+   {
+      return  JSON.parse(op);
+   }
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>8. query_data(name, url)</b></i></p>
+<p> <b>Return - </b> String</p>
+<p> <b>name</b>name of query</p>
+<p> <b>url(optional)</b>pass the url if url is not passed current poage url is takrn as url</p>
+<p> pass the url and get query name value </p>
+<pre>
+<code>
+&lt;script&gt;
+ function query_data(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+  query_data("name", "http://wbut.com/hgfhf/fgfgh.html?name=bhuvan")
+  
+  /*output
+  bhuvan
+  
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>9. count(arry)</b></i></p>
+<p> <b>Return - </b> Number</p>
+<p> <b>arry</b> pass Array/Object</p>
+<p> pass the Array/Object  and get its length </p>
+<pre>
+<code>
+&lt;script&gt;
+function count(arry)
+    {
+        return arry.length;
+    }
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+ var arry=[1,2,3,4,5];
+  echo(count(arry));
+  
+  /*output
+  
+    5
+ 
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>10. sub_string (ot, topstring, topno, bottomstring, bottomno)</b></i></p>
+<p> <b>Return - </b> String</p>
+<p> Pass the arry and get its sub string </p>
+<pre>
+<code>
+&lt;script&gt;
+function sub_string (ot,topstring,topno,bottomstring,bottomno)
+                        {
+                      var pos1=ot.indexOf(topstring)+topno;
+                      var ot1=ot.substr(pos1);
+                      var pos2=ot1.indexOf(bottomstring)-bottomno;
+                      var json= ot1.substr(0,pos2);
+                      return json;
+                        }
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+ var op='string- number to correct the string';
+  echo(sub_string($op,'ing',3,'the',0));
+  
+  /*output
+  
+   - number to correct 
+ 
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>11. isset(variable)</b></i></p>
+<p> <b>Return - </b> true/false</p>
+<p> <b>variable- </b> variable name</p>
+<p> Pass variable to cheek it is defined or not</p>
+<pre>
+<code>
+&lt;script&gt;
+function isset(variable) {
+    return typeof variable !== typeof undefined;
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+ var op='string- number to correct the string';
+  echo(isset(op));
+  
+  /*output
+  
+   - true
+ 
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>12. urlencode(url)</b></i></p>
+<p> <b>Return - </b> true/false</p>
+<p> <b>url- </b> string</p>
+<p> Pass string  to urlencode</p>
+<pre>
+<code>
+&lt;script&gt;
+function urlencode(url) {
+  return encodeURI(url);
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+             var op='string- number to correct the string';
+  echo(urlencode(op));
+  
+  /*output
+  
+   string-%20number%20to%20correct%20the%20string
+ 
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>13. urldecode(url)</b></i></p>
+<p> <b>Return - </b>string</p>
+<p> <b>url- </b> string- urlencoded string</p>
+<p> Pass urlencoded string and get original text</p>
+<pre>
+<code>
+&lt;script&gt;
+function urldecode(url) {
+  return decodeURI(url);
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+             var op='%20number%20to%20correct%20the%20string';
+  echo(urldecode(op));
+  
+  /*output
+  
+  number to correct the string
+ 
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>14.parse_str(queryString)</b></i></p>
+<p> <b>Return - </b>Array</p>
+<p> <b>url- </b> string</p>
+<p> Pass query as string and get query as object</p>
+<pre>
+<code>
+&lt;script&gt;
+function parse_str(queryString) {
+    var query = {};
+    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+    for (var i = 0; i < count(pairs); i++) {
+        var pair = pairs[i].split('=');
+        query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+    }
+    return query;
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+             var op='name=bhuvan&amp;tital=thakur';
+  print_r(parse_str(op));
+  
+  /*output
+  
+object(2): {
+   name:  string(6): "bhuvan"
+   tital:  string(6): "thakur"
+}
+ 
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>15. explode(exp,string)</b></i></p>
+<p> <b>Return - </b>Array</p>
+<p> <b>exp- </b> string-patter to expode</p>
+<p> <b>string- </b> string-pass string to explode</p>
+<p></p>
+<pre>
+<code>
+&lt;script&gt;
+function explode(exp,string)
+{
+    return string.split(exp);
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+             var op='name=bhuvan&amp;tital=thakur';
+  print_r(explode("&",op));
+  
+  /*output
+  
+array(2): {
+   [0]:  string(11): "name=bhuvan"
+   [1]:  string(16): "tital=thakur"
+}
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>16. randombg(id,img_arry=["hum"])</b></i></p>
+<p> <b>Return - </b>No return </p>
+<p> <b>id- </b> Element id</p>
+<p> <b>arry- </b> array of image link</p>
+<p> Pass  element id and array of image(s) (if image array is not passed it take default image array) to get random backgrount of the element. for single image only pass single image ass array</p>
+<pre>
+<code>
+&lt;script&gt;
+function randombg(id,img_arry=["hum"]){
+    if(img_arry[0]!="hum")
+       var bigSize=img_arry;
+       else
+       {
+  var bigSize = [ "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-1.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-2.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-3.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-4.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-5.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-6.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-7.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-8.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-9.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-10.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-11.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-12.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-13.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-14.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-15.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-16.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-17.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-18.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-19.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-20.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-21.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-22.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-23.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-24.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-25.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-26.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-27.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-28.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-29.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-30.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-31.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-32.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-33.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-34.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-35.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-36.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-37.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-38.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-39.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-40.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-41.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-42.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-43.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-44.jpg')",
+                 "url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-45.jpg')",
+                 ];
+       }
+  var random= Math.floor(Math.random() * bigSize.length);
+  document.getElementById(id).style.backgroundImage=bigSize[random];
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+window.onload = function() // on window load
+{
+randombg("hhhhh",holi);
+randombg("hb");
+randombg("footer",footer);
+}
+
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>17. base64_decode(s)</b></i></p>
+<p> <b>Return - </b>String</p>
+<p> <b>s- </b> string-Encoded string</p>
+<p></p>
+<pre>
+<code>
+&lt;script&gt;
+function base64_decode(s) {
+    var e={},i,b=0,c,x,l=0,a,r='',w=String.fromCharCode,L=s.length;
+    var A="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    for(i=0;i<64;i++){e[A.charAt(i)]=i;}
+    for(x=0;x<L;x++){
+        c=e[s.charAt(x)];b=(b<<6)+c;l+=6;
+        while(l>=8){((a=(b>>>(l-=8))&0xff)||(x<(L-2)))&&(r+=w(a));}
+    }
+    return r;
+};   
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+             var op='bmFtZT1iaHV2YW4mYW1wO3RpdGFsPXRoYWt1cg==';
+  print_r(base64_decode(op));
+  
+  /*output
+name=bhuvan&amp;tital=thakur
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>18. base64_encode(stringToEncode)</b></i></p>
+<p> <b>Return - </b>String</p>
+<p> <b>stringToEncode- </b> string-decoded string</p>
+<p></p>
+<pre>
+<code>
+&lt;script&gt;
+function base64_encode(stringToEncode) { 
+    
+  var encodeUTF8string = function (str) {
+    return encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
+      function toSolidBytes (match, p1) {
+        return String.fromCharCode('0x' + p1)
+      })
+  }
+
+  if (typeof window !== 'undefined') {
+    if (typeof window.btoa !== 'undefined') {
+      return window.btoa(encodeUTF8string(stringToEncode))
+    }
+  } else {
+    return new Buffer(stringToEncode).toString('base64')
+  }
+
+  var b64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
+  var o1
+  var o2
+  var o3
+  var h1
+  var h2
+  var h3
+  var h4
+  var bits
+  var i = 0
+  var ac = 0
+  var enc = ''
+  var tmpArr = []
+
+  if (!stringToEncode) {
+    return stringToEncode
+  }
+
+  stringToEncode = encodeUTF8string(stringToEncode)
+
+  do {
+    o1 = stringToEncode.charCodeAt(i++)
+    o2 = stringToEncode.charCodeAt(i++)
+    o3 = stringToEncode.charCodeAt(i++)
+
+    bits = o1 << 16 | o2 << 8 | o3
+
+    h1 = bits >> 18 & 0x3f
+    h2 = bits >> 12 & 0x3f
+    h3 = bits >> 6 & 0x3f
+    h4 = bits & 0x3f
+
+    tmpArr[ac++] = b64.charAt(h1) + b64.charAt(h2) + b64.charAt(h3) + b64.charAt(h4)
+  } while (i < stringToEncode.length)
+
+  enc = tmpArr.join('')
+
+  var r = stringToEncode.length % 3
+
+  return (r ? enc.slice(0, r - 3) : enc) + '==='.slice(r || 3)
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+             var op='name=bhuvan&amp;tital=thakur';
+  print_r(base64_encode(op));
+  
+  /*output
+bmFtZT1iaHV2YW4mYW1wO3RpdGFsPXRoYWt1cg==
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>19. fancyTimeFormat(time)</b></i></p>
+<p> <b>Return -String</b></p>
+<p> <b>time-</b> time in miliseconds </p>
+<p>pass time as miliseconds and get fency time </p>
+<pre>
+<code>
+&lt;script&gt;
+ function fancyTimeFormat(time)
+{    // Hours, minutes and seconds
+    var hrs = ~~(time / 3600);
+    var mins = ~~((time % 3600) / 60);
+    var secs = Math.round(time%60);
+    // Output like "1:01" or "4:03:59" or "123:03:59"
+    var ret = "";
+    if (hrs > 0) {
+        ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+    }
+    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+    ret += "" + secs;
+    return ret;
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+fancyTimeFormat("123456");
+  /*output
+      34:17:36
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>20.toggleFullscreen (el) </b></i></p>
+
+<pre>
+<code>
+&lt;script&gt;
+function toggleFullscreen (el) {
+				if(document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement){
+					if(document.exitFullscreen){
+						document.exitFullscreen();
+					}else if(document.mozCancelFullScreen){
+						document.mozCancelFullScreen();
+					}else if(document.webkitExitFullscreen){
+						document.webkitExitFullscreen();
+					}else if(document.msExitFullscreen){
+						document.msExitFullscreen();
+					}
+					
+					udpf_video_player_fst.className = "udpf_video_player_fst_expand";
+					
+				}else{
+					if(document.documentElement.requestFullscreen){
+						el.requestFullscreen();
+					}else if(document.documentElement.mozRequestFullScreen){
+						el.mozRequestFullScreen();
+					}else if(document.documentElement.webkitRequestFullscreen){
+						el.webkitRequestFullscreen();
+					}else if(document.documentElement.msRequestFullscreen){
+						el.msRequestFullscreen();
+					}
+					udpf_video_player_fst.className = "udpf_video_player_fst_shrink";
+				}
+			}
+ 
+ 
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>21.dom(string)</b></i></p>
+<p> <b>Return -Object</b></p>
+<p> <b>string-</b> String</p>
+<p>alwAys called to dome phrase</p>
+<pre>
+<code>
+&lt;script&gt;
+ function dom(string){
+return new DOMParser().parseFromString(string,'text/html');
+}
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>21.</b></i></p>
+<pre>
+<code>
+&lt;script&gt;
+ ////dom
+function dom_links_arry(arun)
+{ var result=[];
+for(var i=0; i< count(arun.links);i++)
+{
+    result[i]={};
+    result[i]['att']= dom_atribute(arun.links[i]);
+    result[i]['text']=arun.links[i].innerText;
+}
+return result;
+}
+
+function dom_img_arry(arun)
+{ var result=[];
+for(var i=0; i< count(arun.images);i++)
+{
+    result[i]={};
+    result[i]['att']= dom_atribute(arun.images[i]);
+}
+return result;
+}
+
+function dom_atribute(arun)
+{ var result=[];
+for(var i=0; i< count(arun.attributes);i++)
+{
+      result[i]={};
+      result[i]['alt_name']= arun.attributes[i].nodeName;
+      result[i]['alt_value']=arun.attributes[i].nodeValue;
+}
+return result;
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+ var op=js_browser("http://bhuvankumarthakur.co.nf/tv/?un=bhuv&up=bhuv");  //not http://bhuvankumarthakur.co.nf cross domin error problem
+ var  dom_object=dom(op);
+ var arry=dom_links_arry(dom_object);
+ print_r(arry);
+ 
+  /*output
+
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>22.scanf(idname,id_class="id")</b></i></p>
+<p> <b>Return - </b>string</p>
+<p> Get value of specified  dom</p>
+<pre>
+<code>
+&lt;script&gt;
+function scanf(idname,id_class="id")
+{
+ var display=id_class ;
+if(display==="id")
+ var result= document.getElementById(idname).innerHTML;
+ if(display==="class")
+ var result=document.getElementsByClassName(idname).innerHTML;
+&lt;/script&gt;
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+ &lt;p id="bhu"&gt;hi &lt;/p&gt;
+ echo(scanf("bhu"));
+  /*output
+hi
+hi
+  */
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+ <!-- content start End-->
+</div>
+ <!-- content End -->
+    <!--                            js tab  end                        -->
+    
+    
+    <!--                       Youtube tab                        -->
+ <!-- content -->
+<div id="youtube" class="mycss-big-container tab" style="max-width:95%; height:auto; margin-top:0px; margin-bottom:05px;display:none;">
+<!-- content Start-->
+
+<h4><i><b>Function(s)</b></i></h4>
+
+<div>
+<p><i><b>1.  youtube_playlist($id)</b></i></p>
+<p>$id=  string (pass id as string)  </p>
+<p>Return- array  </p>
+<p>  By Providing playlist id to funtion it will give array of video in that playlist.   </p>
+<pre>
+<code>
+&lt;script&gt;
+function  youtube_playlist(id)
+              { 
+                       var $url;
+          $url="https://www.youtube.com/playlist?list="+$id;
+     
+               var ot=js_browser($url);
+               
+             var   $json= sub_string(ot,'window["ytInitialData"]',26,'window["ytInitialPlayerResponse"',6);
+              // echo($json)
+               
+               var $arry1=json_decode($json);
+              var $arry=$arry1['contents']['twoColumnBrowseResultsRenderer']['tabs'][0]['tabRenderer']['content']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents'][0]['playlistVideoListRenderer']['contents'];
+           // print_r ($arry);
+          // return $arry;
+            var $result={};
+               $result['video']=[];
+              for( var $i=0; $i < count($arry) ; $i++)
+                         {
+ $result['video'][$i]={};
+$result['video'][$i]['id']=$arry[$i]['playlistVideoRenderer']['videoId'];
+$result['video'][$i]['name']=$arry[$i]['playlistVideoRenderer']['title']['simpleText'];
+$result['video'][$i]['img']=$arry[$i]['playlistVideoRenderer']['thumbnail']['thumbnails'][0]['url'];
+                       }
+          return $result['video'];  
+           //print_r ($result);
+           }
+            &lt;/script&gt;
+
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+            &lt;script&gt;
+array(100): {
+   [0]:  object(3): {
+      id:  string(11): "IOPx1tDCpZA"
+      name:  string(74): "MahaShivRatri, Mar 4, 2019 Live Webstream with Sadhguru | Isha Yoga Center"
+      img:  string(148): "https://i.ytimg.com/vi/IOPx1tDCpZA/hqdefault_live.jpg?sqp=COjs9OMF-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCyl8RfvYzCvx1iAWhewOtNY-Ar-A"
+   }
+   [1]:  object(3): {
+      id:  string(11): "smZRzehsXHA"
+      name:  string(38): "Aaj Tak LIVE TV | Hindi News Live 24x7"
+      img:  string(148): "https://i.ytimg.com/vi/smZRzehsXHA/hqdefault_live.jpg?sqp=COjs9OMF-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCNReBSi2NZT8gzTpVKy_Ual28FvA"
+............................
+......................................
+..........................
+   [99]:  object(3): {
+      id:  string(11): "mXgfe9ekx5E"
+      name:  string(38): "99TV Telugu Live Updates | Latest News"
+      img:  string(144): "https://i.ytimg.com/vi/mXgfe9ekx5E/hqdefault_live.jpg?sqp=COjs9OMF-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLCgJBloBUTyO9PBppSJFavt6j1w_A"
+   }
+}
+
+            &lt;/script&gt;
+
+</code>
+</pre>
+</div>
+
+<div>
+<p><i><b>2. youtube_search($id)  </b></i></p>
+<p> $id= string ( pass  query as string )   </p>
+<p>  Return array   </p>
+<pre>
+<code>
+ &lt;script&gt;
+
+function  youtube_search($id)
+              { 
+                       var $url;
+          $url="https://www.youtube.com/results?search_query="+$id;
+     
+               var ot=js_browser($url);
+               //echo(ot);
+             var   $json= sub_string(ot,'window["ytInitialData"]',26,'window["ytInitialPlayerResponse"',6);
+              //echo($json)
+               
+               var $arry1=json_decode($json);
+              // print_r($arry1);
+              var $arry=$arry1['contents']['twoColumnSearchResultsRenderer']['primaryContents']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents'];
+           //print_r ($arry);
+          //return $arry;
+            var $result={};
+               $result['video']=[];
+              for( var $i=0; $i < count($arry) ; $i++)
+                         {
+                            // echo ("up");
+                            if(!isset($arry[$i]['videoRenderer']))
+                             {continue;}
+                              //echo ("med");
+ $result['video'][$i]={};
+$result['video'][$i]['id']=$arry[$i]['videoRenderer']['videoId'];
+$result['video'][$i]['name']=$arry[$i]['videoRenderer']['title']['simpleText'];
+$result['video'][$i]['img']=$arry[$i]['videoRenderer']['thumbnail']['thumbnails'][0]['url'];
+             //echo ("down");
+                       }
+                       
+          return $result['video'];  
+           //print_r ($result);
+              }
+               &lt;/script&gt;
+
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+
+ var arry=youtube_search("nhfdghhbkjbh");
+    print(arry);
+
+
+ &lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+<div>
+<p><i><b>3. youtube_video(id)  </b></i></p>
+<p> id= string ( pass  query as string )   </p>
+<p>  Return array   </p>
+
+<pre>
+<code>
+ &lt;script&gt;
+
+
+/////1
+function  youtube_vi1(id)
+              { 
+                       var $url;
+          $url="https://www.youtube.com/watch?v="+id;
+     
+               var ot=js_browser($url);
+               //echo(ot);
+             var   $json= sub_string(ot,'&lt;script&gt;var ytplayer = ytplayer || {};ytplayer.config = ',57,';ytplayer.load = function() {',0);
+              //echo($json);
+               
+               var $arry1=json_decode($json);
+               
+             //print_r($arry1);
+             
+          return $arry1["args"];  
+           //print_r ($result);
+              }
+              
+              
+              /////
+              
+              function  youtube_vi2(id)
+              { 
+     var url , op ,json,json1,$result={},$arry, $arry0=[],$arry1=[], i,j,k;
+url="http://www.youtube.com/get_video_info?video_id="+id+"";
+op= js_browser(url);
+$arry=parse_str(op);
+
+             
+          return $arry;  
+           //print_r ($result);
+              }
+              
+///2
+
+
+//////
+function youtube_video(id)
+{
+var url , op ,json,json1,$result={},$arry, $arry0=[],$arry1=[], i,j,k;
+if(isset(youtube_vi1(id)))
+$arry=youtube_vi1(id);
+else
+$arry=youtube_vi2(id);
+
+$arry0=json_decode($arry["player_response"]);
+
+$result["ada_formats"]=[];
+for (i=0; i<=count($arry0["streamingData"]["adaptiveFormats"])-1; i++)
+{
+  $result["ada_formats"][i]={};
+  if(isset($arry0["streamingData"]["adaptiveFormats"][i]["qualityLabel"]))
+  $result["ada_formats"][i]["quality"]=$arry0["streamingData"]["adaptiveFormats"][i]["qualityLabel"];
+  else
+  $result["ada_formats"][i]["quality"]=$arry0["streamingData"]["adaptiveFormats"][i]["audioQuality"];
+  $result["ada_formats"][i]["url"]=$arry0["streamingData"]["adaptiveFormats"][i]["url"];
+}
+//print_r($result);
+return $result;
+}
+
+
+&lt;/script&gt;
+
+</code>
+</pre>
+<p>Example</p>
+<pre>
+<code>
+ &lt;script&gt;
+      var   arryy=youtube_video("7kOkHx9X7A0");
+ print_r(arrry);
+
+/////////////////output
+
+object(3): {
+   ada_formats:  array(22): {
+      [0]:  object(2): {
+         quality:  string(4): "720p"
+         url:  string(832): "https://r1---sn-gwpa-25ur.googlevideo.com/videoplayback?ei=AyJ-XKYyk4TPuw_3jZXYCA&dur=6314.766&gcr=in&sparams=aitags%2Cclen%2Cdur%2Cei%2Cgcr%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&requiressl=yes&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C394%2C395%2C396%2C397%2C398&id=o-AAImM9YNF3E7Ut10ww0C66qM1feBDy3hapRMvWhnkNNe&ms=au%2Crdu&mt=1551770020&gir=yes&pl=42&signature=50578CEABAD6FC8706241136D8804CB7FF04BED6.3CF2813D7084193359D10C8DA3AB88DC76C3B41A&keepalive=yes&ip=2405%3A205%3Aa121%3A9980%3A482f%3A9fc5%3Abeb2%3A2be4&key=yt6&c=WEB&txp=5533432&mm=31%2C29&mn=sn-gwpa-25ur%2Csn-gwpa-qxas&ipbits=0&clen=715297000&source=youtube&fvip=1&lmt=1540305343027924&mv=m&expire=1551791715&initcwndbps=140000&mime=video%2Fmp4&itag=136"
+      }
+      [1]:  object(2): {
+         quality:  string(4): "720p"
+         url:  string(833): "https://r1---sn-gwpa-25ur.googlevideo.com/videoplayback?ei=AyJ-XKYyk4TPuw_3jZXYCA&dur=6314.766&gcr=in&sparams=aitags%2Cclen%2Cdur%2Cei%2Cgcr%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&requiressl=yes&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C394%2C395%2C396%2C397%2C398&id=o-AAImM9YNF3E7Ut10ww0C66qM1feBDy3hapRMvWhnkNNe&ms=au%2Crdu&mt=1551770020&gir=yes&pl=42&signature=196269A6865D073F351EE3D8B6CDEDB6DE2C7766.D73D493F3851F2FA9F85A805B25E5BA34CFB9F08&keepalive=yes&ip=2405%3A205%3Aa121%3A9980%3A482f%3A9fc5%3Abeb2%3A2be4&key=yt6&c=WEB&txp=5533432&mm=31%2C29&mn=sn-gwpa-25ur%2Csn-gwpa-qxas&ipbits=0&clen=545512353&source=youtube&fvip=1&lmt=1540313895886081&mv=m&expire=1551791715&initcwndbps=140000&mime=video%2Fwebm&itag=247"
+      }
+......................................
+....................
+......................................
+      [21]:  object(2): {
+         quality:  string(18): "AUDIO_QUALITY_HIGH"
+         url:  string(728): "https://r1---sn-gwpa-25ur.googlevideo.com/videoplayback?ei=AyJ-XKYyk4TPuw_3jZXYCA&dur=6320.703&gcr=in&sparams=clen%2Cdur%2Cei%2Cgcr%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&requiressl=yes&id=o-AAImM9YNF3E7Ut10ww0C66qM1feBDy3hapRMvWhnkNNe&ms=au%2Crdu&mt=1551770020&gir=yes&pl=42&signature=A4CF21A29F570EE8A41207794183661E9020ABEE.8003AA9C7EC7C5E7E2418C48542C4443DC5BDE3E&keepalive=yes&ip=2405%3A205%3Aa121%3A9980%3A482f%3A9fc5%3Abeb2%3A2be4&key=yt6&c=WEB&txp=5511222&mm=31%2C29&mn=sn-gwpa-25ur%2Csn-gwpa-qxas&ipbits=0&clen=304356569&source=youtube&fvip=1&lmt=1540322806791589&mv=m&expire=1551791715&initcwndbps=140000&mime=audio%2Fmp4&itag=258"
+      }
+   }
+}
+ &lt;/script&gt;
+</code>
+</pre>
+</div>
+
+
+ <!-- content start End-->
+</div>
+ <!-- content End -->
+    <!--                            youtube tab  end                        -->
+    
+    <!--                           jiosaavan-pro tab  start                        -->
+
+<!-- content -->
+<div id="jiosaavanpro" class="mycss-big-container tab" style="max-width:95%; height:auto; margin-top:0px; margin-bottom:05px;display:none;">
+<!-- content Start-->
+
+<h1><a id="Jiosaavn_Pro_Chrome_Extension_0"></a>Jiosaavn Pro Chrome Extension</h1>
+<p><img src="https://raw.githubusercontent.com/udpf/JioSaavan-Pro/master/img/quality.png" alt="Song Quality Selector"><br>
+<img src="https://raw.githubusercontent.com/udpf/JioSaavan-Pro/master/img/m1.png" alt="Song Quality Selector"><br>
+<img src="https://raw.githubusercontent.com/udpf/JioSaavan-Pro/master/img/m2.png" alt="Song Quality Selector"></p>
+<p>This Extension will allow you to listen or stream songs in 320 kbps and 192kbps from <a href="http://jiosaavan.com">jiosaavan.com</a>.</p>
+<h2><a id="Features_8"></a>Features</h2>
+<ul>
+<li>Supports 320kbps</li>
+<li>Supports 192kbps</li>
+<li>ADS free Destop and mobile.</li>
+<li>In mobile songs limit removed</li>
+</ul>
+<h2><a id="How_to_use_it_15"></a>How to use it</h2>
+<ul>
+<li>You will have a just select qualities from  player quality selecter.</li>
+</ul>
+<h2><a id="How_to_Install_it_19"></a>How to Install it</h2>
+<p>this extension is currently not hosted in chrome webstore, so you will have to install it manually on chrome. below are the steps</p>
+<ul>
+<li>download the extension here : <a href="https://github.com/udpf/JioSaavan-Pro/archive/master.zip">download</a></li>
+<li>extract the zip file</li>
+<li>go to chrome extensions page <a href="chrome://extensions/">chrome://extensions/</a></li>
+<li>you will see a button called “Load Unpacked Extension…” click that</li>
+<li>select the extracted folder and press “ok”</li>
+</ul>
+<p>Note : the extension will be enabled on development mode. you will have a popup when opening the chrome. press cancel on that popup. you can always enable it again on the chrome extension page.</p>
+
+  
+  
+ <!-- content start End-->
+</div>
+ <!-- content End -->
+    <!--                           jiosaavan-pro tab  end                        -->
+        
+    <!--                           hungma-pro tab  start                        -->
+
+<!-- content -->
+<div id="hungamapro" class="mycss-big-container tab" style="max-width:95%; height:auto; margin-top:0px; margin-bottom:05px;display:none;">
+<!-- content Start-->
+
+<h1><a id="Hungama_Pro_Chrome_song_mp3_Downloader_Extension_0"></a>Hungama Pro Chrome song mp3 Downloader Extension</h1>
+<p><img src="https://raw.githubusercontent.com/udpf/Hungama-Pro/master/img/p4.png" alt="Picture"><br>
+<img src="https://raw.githubusercontent.com/udpf/Hungama-Pro/master/img/p5.png" alt="Picture"><br>
+<img src="https://raw.githubusercontent.com/udpf/Hungama-Pro/master/img/p6.png" alt="Picture"><br>
+<img src="https://raw.githubusercontent.com/udpf/Hungama-Pro/master/img/p7.png" alt="Picture"><br>
+<img src="https://raw.githubusercontent.com/udpf/Hungama-Pro/master/img/p8.png" alt="Picture"><br>
+<img src="https://raw.githubusercontent.com/udpf/Hungama-Pro/master/img/p9.png" alt="Picture"><br>
+This Extension will allow you to listen or download songs in any quality including HD from <a href="https://www.hungama.com">https://www.hungama.com</a>.</p>
+<h2><a id="Features_10"></a>Features</h2>
+<ul>
+<li>Supports HD streaming</li>
+<li>ADS free for Destop and mobile.</li>
+<li>Song download unlocked.</li>
+<li>Download songs in HD qualities.</li>
+<li>Download all album song not leaving page.</li>
+<li>Download all Playlist song not leaving page.</li>
+<li>More ease than previous to download song.<br>
+-ID3  complite tags.</li>
+</ul>
+<h2><a id="How_to_use_it_21"></a>How to use it</h2>
+<ul>
+<li>You will have a just select qualities from  player quality selecter.</li>
+</ul>
+<h2><a id="How_to_Install_it_25"></a>How to Install it</h2>
+<p>this extension is currently not hosted in chrome webstore, so you will have to install it manually on chrome. below are the steps</p>
+<ul>
+<li>Download the extension here : <a href="https://github.com/udpf/Hungama-Pro/archive/master.zip">Download</a></li>
+<li>Extract the zip file</li>
+<li>Go to chrome extensions page <a href="chrome://extensions/">chrome://extensions/</a></li>
+<li>You will see a button called “Load Unpacked Extension…” click that</li>
+<li>Select the extracted folder and press “ok”</li>
+</ul>
+<p>Note :-</p>
+<ul>
+<li>The extension will be enabled on development mode. you will have a popup when opening the chrome. press cancel on that popup. you can always enable it again on the chrome extension page.</li>
+<li>To get download or quality slecter let page fully loaded if after it options not appear reload or refresh page again (sorry for this).</li>
+</ul>
+ <!-- content start End-->
+</div>
+ <!-- content End -->
+    <!--                           hunagam-pro tab  end                        -->
+    
+  <!--footer start -->
+<footer id="footer" class=" w3-black" style="max-width:95%;  height:auto; margin:auto; margin-top:0px; margin-bottom:1px;">
+<lu class="w3-bar">
+<li class="w3-bar-item w3-hover-blue" style="width:0px;"></li>
+<li class="w3-bar-item">© 2018 udpf.dx.am</li>
+<li class="w3-bar-item">|</li>
+<li class="w3-bar-item">admin@udpf.dx.am</li>
+<li class="w3-bar-item">|</li>
+<a  class="w3-bar-item" href="https://github.com/udpf/">Github</a>
+<li class="w3-bar-item w3-right"><script class="w3-bar-item w3-button tablink"  type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/494184/t/3"></script></li>
+<li class="w3-bar-item w3-right" style="width:0px;"></li>
+<li class="w3-bar-item w3-right"><a href="http://udpf.dx.am/" class="" >Designed by<img src="logo.png" width="20px" height="21px"><strong><span>UDPF TEAM</span></strong></a></li>
+</lu>
+</footer>
+  <!-- footer end -->
+</body>
+</html>
