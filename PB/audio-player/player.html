@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Audio Player</title>
+   <link rel="stylesheet" href="player.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://wbut.co.nf/js_function/tools.js" ></script>
+<link rel="stylesheet" href="///wbut.co.nf/css/css.css?gjhftyt">
+</head>
+
+<body translate="no" id="bodyy">
+  <audio id="udpf-player" autoplay="" ></audio>
+ <!-- player control -->
+    <div  id="audioplayer">
+        <!-- play/puse button-->
+	<button id="pButton" class="play" onclick="play()"></button>
+	 <!-- play/puse button end-->
+	  <!-- timeline-->
+     <div id="timeline">
+    	<div id="playhead"></div>
+                  <!-- <div id="title"><center><b>  London Thumakda </b></center></div>-->
+                   	 <div id="bufffers" ></div>
+    </div>
+              <!-- timeline end -->
+               <div id="download" style="font-size: 12px;">
+                 </div>
+              <div id="volume" title="Set volume"><div id="volumebar"></div></div>
+               <div id="timeup" style="font-size: 12px;"></div>
+</div>
+ <!-- player control end -->
+
+<script src="player.js"></script>
+<script>
+document.getElementById("udpf-player").src = query_data("url");
+
+</script>
+
+</body>
+</html>
