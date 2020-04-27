@@ -88,27 +88,11 @@ input[id=search]{
 <body id='bg'>
 <div id='big_container'>
 <center><div id='button'><?php echo $arry['title']; ?></div></center>
-<iframe width="60px" height="65px" name="iframe_a" frameborder="0" allowfullscreen="true" scrolling="no"  style="align="center" float="center" id='livetv_video1' class="media__video--responsive" style="z-index:4"></iframe>
+<iframe width="auto" height="65px" name="iframe_a" frameborder="0" allowfullscreen="true" scrolling="no"  style="align="center" float="center" id='livetv_video1' class="media__video--responsive" style="z-index:4"></iframe>
 <form id="form">
  <input type="gmail" id="search" placeholder="search" autocomplete="off">      
 </form>
 <div id='results'></div>
-<hr>
-<?php
-$returnValue=$arry;
-$arry_length=count($returnValue['items']);
-for($x=0; $x < $arry_length; $x++)
-{
-?>
-<div  id="button">
-<a href="http://bhuvankumarthakur.co.nf/tools/custom/player.php?title=<?php echo $returnValue['items'][$x]['name']; ?>&ext=<?php echo $returnValue['items'][$x]['type']; ?>&url=<?php echo $returnValue['items'][$x]['url']; ?>" target="iframe_a"><img style="width:100px;height:auto;" src="<?php echo $returnValue['imageurl'].$returnValue['items'][$x]['image']; ?>" alt='<?php echo $returnValue['items'][$x]['name']; ?>'></a>
-<div  id="desc">
-<?php echo $returnValue['items'][$x]['name']; ?>
-  </div>
-  </div>
-<?php
-}
-?>
 
 <center><a href="/" ><div id='button'> Home </div></a></center>
 
@@ -134,7 +118,7 @@ for($x=0; $x < $arry_length; $x++)
               $.each(data, function(key, val){
                 if ((val.name.search(regex) != -1)){   
 				  output += '<div  id="button">';
-                  output += '<a href="http://bhuvankumarthakur.co.nf/tools/custom/player.php?title='+val.name+'&ext='+val.type+'&url=' + val.url + '"  target="iframe_a" ><img style="width:100px;height:auto;" src="http://bhuvankumarthakur.co.nf/playlists/tvchannels/logoicon/' + val.image +'" alt="'+val.name+'"></a>';  
+                  output += '<a href="PB/audio-player/player.html?title='+val.name+'&ext='+val.type+'&url=' + val.url + '"  target="iframe_a" ><img style="width:100px;height:auto;" src="http://bhuvankumarthakur.co.nf/playlists/tvchannels/logoicon/' + val.image +'" alt="'+val.name+'"></a>';  
                  output +=  '<div  id="desc">'+val.name+'</div></div>';
 				 count++;
                 }
