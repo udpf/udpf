@@ -1,0 +1,257 @@
+{
+  "title": "Radio Live",
+  "playerurl": "http://bhuvankumarthakur.co.nf/tools/custom/player.php",
+  "imageurl": "http://bhuvankumarthakur.co.nf/playlists/tvchannels/logoicon/",
+  "items": [
+     {
+      "name":"Mukesh",
+      "image":"mukesh",
+      "url": "http://prclive1.listenon.in:9308/;",
+      "type": "mp3"
+    },      
+	 {
+	 
+      "name":"lata mangeshkar",
+      "image":"latamangeshkar",
+      "url": "http://prclive1.listenon.in:8832/",
+      "type": "mp3"
+    },    
+	{
+	 
+      "name":"Kishore Kumar",
+      "image":"kishorekumar",
+      "url": "http://prclive1.listenon.in:8834/",
+      "type": "mp3"
+    },     {
+	 
+      "name":"Asha Bhosle",
+      "image":"ashabhosle",
+      "url": "http://prclive1.listenon.in:8812/",
+      "type": "mp3"
+    },     {
+	 
+      "name":"Momad Rafi",
+      "image":"momadrafi",
+      "url": "http://prclive1.listenon.in:8814/",
+      "type": "mp3"
+    },
+     {
+	 
+      "name":"radio bolly fm",
+      "image":"",
+      "url": "http://stream.radiobollyfm.in:8201/hd/;",
+      "type": "mp3"
+    },
+     {
+
+      "name": "DD News Audio",
+      "image": "ddnews",
+      "url": "http://sknwz08.skandha.tv/live/DDNewsAudio_audio/playlist.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "My radio",
+      "image": "tv",
+      "url": "http://78.129.190.50:38192/;",
+      "type": "mp3"
+    },
+    {
+      "name": "radio rudraksh",
+      "image": "rr",
+      "url": "http://38.107.242.90:8114/;",
+      "type": "mp3"
+    },
+    {
+      "name": "radio bhurukwa",
+      "image": "rb",
+      "url": "http://live.itechnepal.com:8374/stream",
+      "type": "mp3"
+    },
+    {
+      "name": "radio janakpur",
+      "image": "rj",
+      "url": "http://streaming.hamropatro.com:8002/;",
+      "type": "mp3"
+    },
+    {
+      "name": "Radio Mithila",
+      "image": "rm",
+      "url": "http://streaming.hamropatro.com:8244/;",
+      "type": "mp3"
+    },
+    {
+      "name": "Desi world Radio",
+      "image": "desiradio",
+      "url": "http://ns2.desiworldradio.com:7078/stream",
+      "type": "mp3"
+    },
+    {
+      "name": "Vividh Bharati",
+      "image": "VividhBharati",
+      "url": "http://airlive.nic.in/hls-live/livepkgr/_definst_/vividhbharti.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "Pehla Nasha",
+      "image": "pn",
+      "url": "http://pehlanashahdlive-lh.akamaihd.net/i/PehlaNashaHDLive_1_1@335229/index_1_av-p.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "Fm Rainbow",
+      "image": "fmrainbow",
+      "url": "http://airlive.nic.in/hls-live/livepkgr/_definst_/fmrainbow.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "hungama bhakti",
+      "image": "hbhakti",
+      "url": "http://123.176.41.8:8156/;",
+      "type": "mp3"
+    },
+    {
+      "name": "hbolly",
+      "image": "hbolly",
+      "url": "http://123.176.41.8:8056/;",
+      "type": "mp3"
+    },
+    {
+      "name": "Hunhama English",
+      "image": "henglish",
+      "url": "http://123.176.41.8:8432/;",
+      "type": "mp3"
+    },
+{
+      "name": "Hungama Mehfil",
+      "image": "hmehfil",
+      "url": "http://123.176.41.8:8156/;",
+      "type": "mp3"
+    },
+    {
+      "name": "Hungama 90 Classic",
+      "image": "h90c",
+      "url": "http://123.176.41.8:8556/;",
+      "type": "mp3"
+    },
+    {
+      "name": "hungama punjabi hits",
+      "image": "hphits",
+      "url": "http://123.176.41.8:8856/;",
+      "type": "mp3"
+    },
+    {
+      "name": "hungama bolly romantics",
+      "image": "hro",
+      "url": "http://123.176.41.8:8032/;",
+      "type": "mp3"
+    },
+    {
+      "name": "Hungama Bollywood Instrumental",
+      "image": "hbins",
+      "url": "http://123.176.41.8:8532/;",
+      "type": "mp3"
+    },
+    {
+      "name": "BBC Worlds Service",
+      "image": "bbcworlds",
+      "url": "http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws",
+      "type": "mp3"
+    },
+    {
+      "name": "Radio kantipur",
+      "image": "rk",
+      "url": "http://broadcast.radiokantipur.com:7248/stream",
+      "type": "mp3"
+    },
+    {
+      "name": "Desi mix",
+      "image": "dmm",
+      "url": "http://s0.desimusicmix.com:8000/HQ",
+      "type": "mp3"
+    },
+    {
+      "name": "Sama Karachi FM",
+      "image": "skf",
+      "url": "http://audio.samaafm.com:8010/;stream.nsv",
+      "type": "mp3"
+    },
+    {
+      "name": "Hum FM",
+      "image": "humfm",
+      "url": "http://ice10.securenetsystems.net/HUMFM",
+      "type": "mp3"
+    },
+    {
+      "name": "CBN News",
+      "image": "cbnnews",
+      "url": "http://cbnradio.streamguys1.com/news-128K",
+      "type": "mp3"
+    },
+    {
+      "name": "Red FM Kolkata",
+      "image": "rf",
+      "url": "http://gir.videocdn.scaleengine.net/gir-live/play//mp4:gir-kol04/playlist.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "Radio City",
+      "image": "radiocity",
+      "url": "http://prc.streamguys1.com/secure-radiocity-hindi.mp3",
+      "type": "mp3"
+    },
+    {
+      "name": "Sky News Radio",
+      "image": "skynews",
+      "url": "http://video.news.sky.com/snr/news/snrnews.mp3",
+      "type": "mp3"
+    },
+    {
+      "name": "Fox News",
+      "image": "foxnews",
+      "url": "http://65.19.131.138/foxnewsradio-foxnewsaac-ibc2",
+      "type": "mp3"
+    },
+    {
+      "name": "heart FM",
+      "image": "heart",
+      "url": "http://media-the.musicradio.com/HeartUK",
+      "type": "mp3"
+    },
+    {
+      "name": "Frends FM Kolkta",
+      "image": "ff",
+      "url": "http://gir.videocdn.scaleengine.net/gir-live/play//mp4:gir-kol01/playlist.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "Radio Mirchi Kolkata",
+      "image": "rmf",
+      "url": "http://gir.videocdn.scaleengine.net/gir-live/play//mp4:gir-kol02/playlist.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "OAY! FM Kolkata",
+      "image": "of",
+      "url": "http://gir.videocdn.scaleengine.net/gir-live/play//mp4:gir-kol03/playlist.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "Big FM Kolkata",
+      "image": "bf",
+      "url": "http://gir.videocdn.scaleengine.net/gir-live/play//mp4:gir-kol05/playlist.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "Edge fm",
+      "image": "edgefm",
+      "url": "http://livestream.mediaworks.nz/radio_origin/edge_128kbps/chunklist.m3u8",
+      "type": "mp3"
+    },
+    {
+      "name": "Captain FM",
+      "image": "captainfm",
+      "url": "http://ice-the.musicradio.com/Capital",
+      "type": "mp3"
+    }
+  ]
+}
