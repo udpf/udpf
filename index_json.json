@@ -5,18 +5,6 @@
   "links": [
     
     {
-      "url": "https://udpf.github.io/udpf/tools/cal.html,
-      "name":"cal"
-    },
-    {
-      "url": "https://udpf.github.io/udpf/tools/sci_cal.html",
-      "name":"sci-cal"
-    },
-    {
-      "url": "https://udpf.github.io/udpf/index_json.json",
-      "name":"Json"
-    },
-     {
       "url": "https://udpf.github.io/udpf/udpf.html",
       "name": "udpf"
     },
