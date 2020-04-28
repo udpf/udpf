@@ -4,11 +4,11 @@
   "domain": "index2.php",
   "links": [
     {
-      "url": "https://udpf.github.io/udpf/tools/sci-cal.html",
+      "url": "https://udpf.github.io/udpf/tools/calculators/sci-cal.html",
       "name": "sci-cal"
     },
     {
-      "url": "https://udpf.github.io/udpf/tools/cal.html",
+      "url": "https://udpf.github.io/udpf/tools/calculators/cal.html",
       "name": "cal"
     },
     
