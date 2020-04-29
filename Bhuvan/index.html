@@ -95,6 +95,32 @@ input[id=search]{
 </div>
 </body>
 </html>
+         <!---main--->
+<script type="text/javascript">
+ $(window).load(function(){
+        $('#search').keyup(function(){
+            var output = ' ';
+            var count = 1;
+            $.getJSON('radio.json', function(data) {
+			  data=data.items;
+			  imageurl=data.imageurl ;
+              $.each(data, function(key, val){
+                  
+				  output += '<div  id="button">';
+                  output += '<a href="/udpf/PB/audio-player/player.html?title='+val.name+'&ext='+val.type+'&url=' + val.url + '"  target="iframe_a" ><img style="width:100px;height:auto;" src="http://bhuvankumarthakur.co.nf/playlists/tvchannels/logoicon/' + val.image +'" alt="'+val.name+'"></a>';  
+                 output +=  '<div  id="desc">'+val.name+'</div></div>';
+				 count++;
+              
+              });
+              output += '';
+              $('#main').html(output);
+            }); 
+      });
+      
+      
+</script>
+
+
          <!---search jquery--->
 <script type="text/javascript">
  $(window).load(function(){
@@ -125,21 +151,9 @@ input[id=search]{
         });
       });
       
-        <!---main --->
-<script type="text/javascript">
- $(window).load(function(){
-            var output = ' ';
-            var count = 1;
-            $.getJSON('index_json.json', function(data) {
-			  data=data.links;
-              $.each(data, function(key, val){
-                  output += '<a class="w3-btn w3-green w3-margin-bottom w3-margin-right" href="' + val.url + '" >' + val.name +'</a>';        
-                  count++;
-              });
-              output += '';
-              $('#main').html(output);
-            }); 
-      });
+      
 </script>
 
-</script>
+
+
+
