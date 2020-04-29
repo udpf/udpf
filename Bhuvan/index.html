@@ -124,4 +124,22 @@ input[id=search]{
             }); 
         });
       });
+      
+        <!---main --->
+<script type="text/javascript">
+ $(window).load(function(){
+            var output = ' ';
+            var count = 1;
+            $.getJSON('index_json.json', function(data) {
+			  data=data.links;
+              $.each(data, function(key, val){
+                  output += '<a class="w3-btn w3-green w3-margin-bottom w3-margin-right" href="' + val.url + '" >' + val.name +'</a>';        
+                  count++;
+              });
+              output += '';
+              $('#main').html(output);
+            }); 
+      });
+</script>
+
 </script>
