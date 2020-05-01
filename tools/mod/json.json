@@ -1,0 +1,51 @@
+{
+    "apk": "app/apk/",
+    "jar": "app/jar/",
+    "exe": "app/pc/",
+    "details": "details.html?number=",
+    "path": "app",
+    
+"app": [
+        
+            {
+        "name": "Qwik Edit",
+        "p_name": "com.quickefit",
+        "f_name": "QuickEdit.v.1.6.2.b.137.crk.ADS.Removed.apk ",
+        "m_info":"ADS FREE / FULLY OFFLINE",
+        "m_by": "UDPF",
+        "a_info": "file editor",
+        "m_date":"29/04/2020",
+         "a_type":"apk",
+        "number":"1",
+        "version":"1.6.2.b.137",
+        "img": "https://image.winudf.com/v2/image1/Y29tLnJobXNvZnQuZWRpdF9pY29uXzE1ODc4OTQ3MTFfMDAw/icon.png?w=100&fakeurl= "
+        
+      },
+      
+            {
+        "name": "jio moded",
+        "p_name": "jio.com",
+        "f_name": "GTV.apk",
+        "m_info":"unlock",
+        "m_by": "udpf",
+        "info": "detail here",
+        "m_date":"unlock",
+        "version":"replace",
+        "img": "gdimg.php?s=008080_F_130_90&t=GTV"
+      }
+],
+
+"country": {
+    "in" : "India",
+    "cn" : "China",
+    "us" : "United State",
+    "uk" : "United Kingdom",
+    "rs" : "Russia",
+    "Af" : "Afganisthan",
+    "np" : "Nepal",
+    "bd" : "Bangladesh",
+    "jp" : "Japan",
+    "sl" : "Sri lanka"
+    }
+      
+}

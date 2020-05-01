@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Details</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="Application Details">
+<meta name="Description" content="Details ">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="http://bhuvankumarthakur.co.nf/mycss/mycss_latest.css">
+<link rel="stylesheet" href="/mycss/css.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/wbut.co.nf/js_function/tools.js?jfdd" ></script>
+</head>
+<body class="mycss-bg">
+<!-- header-->
+<header class="w3-bar w3-dark-gray w3-top w3-padding" >
+  <a class="w3-bar-item w3-button  w3-green" href="/"><span class="fa fa-home"></span></a>
+  <div class="w3-bar-item w3-button w3-white">Hungama Details</div>
+</header>
+<!-- header End -->
+
+
+<!-- footer-->
+<footer class="w3-container w3-grey w3-padding w3-bottom">
+<p class="w3-center"><span class="fa fa-copyright"><?php echo date("Y"); ?></p>
+</footer>
+<!-- footer End-->
+
+<!-- content -->
+<div id='main' class="mycss-big-container w3-bar w3-light-gray" style="max-width:375px; margin-top:60px; margin-bottom:80px;">
+<!-- content start-->
+	
+
+<!-- content start End-->
+</div>
+ <!-- content End -->
+</body>
+</html>
+<script>
+
+
+
+////// main content///////
+
+$(window).load(function(){
+
+ 
+
+      var output, data,dataa, json,a= query_data("number")  ;
+
+       json=js_browser("json.json"); 
+
+            dataa=json_decode(json);
+
+            data=dataa.app;
+
+           //echo(data);
+
+ output = '<div class="w3-bar w3-card-4 w3-margin" style="width:300px; height:auto;">'+
+ '<div class="w3-bar-item w3-right" style="width:300px;height:auto;">  '+
+      '<img style="width:268px;height:auto;" src=" '+ data[a]['img'] +' ">'+
+ ' </div >'+
+'<div class="w3-bar-item w3-left">'+
+    ' <p>'+
+        '<b> Name:</b>'+data[a]['name']+'<br>'+
+       '<b> App Type:</b>'+data[a]['a_type']+'<br>'+
+       '<b> Pakage Name:</b>'+data[a]['p_name']+'<br>'+
+       '<b> Mode By:</b>'+data[a]['m_by']+'<br>'+
+       '<b> Version:</b>'+data[a]['version']+'<br>'+
+       '<b> Date:</b>'+data[a]['m_date']+'<br>'+
+       '<b> Mode Info:</b>'+data[a]['m_info']+'<br>'+
+       '<b> App Info:</b>'+data[a]['a_info']+'<br>'+
+       '<a class="w3-bar-item w3-button  w3-green" href="'+ dataa[data[a]['a_type']] + data[a]['f_name'] +' ">download</a><br>'+
+        '</p>'+
+    ' </div></div> ';  
+    
+             echo(output , "id", "main" );
+
+              
+
+            }); 
+
+         
+</script>
+
+
+
