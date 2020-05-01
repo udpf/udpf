@@ -119,7 +119,7 @@ $(window).load(function(){
 			      var a;
 		  for (a= 0; a < count(data) ; a++) { 
 if ((data[a]['name'].search(regex) != -1)){
- output += '<div class=" mycss-floating-box w3-white w3-round" style="  float:left; width:240px;height:165px;"><a class=" w3-margin-bottom w3-margin-right" href="'+dataa['details']+data[a]['number']+ '"  target=""><img  class="img" style="width:240px;height:160px;"  src="'+data[a]['img']+'" alt="' + data[a]['name'] +'">	 </a><div class="w3-container w3-red" style ="width:100%;height:5px"><p> </P></div></div>';  
+ output += '<div class=" mycss-floating-box w3-white w3-round" style="  float:left; width:240px;height:190px;"><a class=" w3-margin-bottom w3-margin-right" href="'+dataa['details']+data[a]['number']+ '"  target=""><img  class="img" style="width:240px;height:160px;"  src="'+data[a]['img']+'" alt="' + data[a]['name'] +'">	 </a><div class="w3-container w3-red" style ="width:100%;height:5px"><p> </P></div> <div class="w3-container " style ="width:100%;height:5px"><p>' + data[a]['name'] +'</P></div></div>';  
                 
                //   echo(1);
 };
