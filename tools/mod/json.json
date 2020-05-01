@@ -3,7 +3,7 @@
     "jar": "app/jar/",
     "exe": "app/pc/",
     "details": "details.html?number=",
-    "path": "app",
+    "ext": "app/ext/",
     
 "app": [
         
