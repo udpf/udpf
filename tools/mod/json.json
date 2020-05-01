@@ -16,23 +16,28 @@
         "a_info": "file editor",
         "m_date":"29/04/2020",
          "a_type":"apk",
-        "number":"1",
+        "number":"0",
         "version":"1.6.2.b.137",
         "img": "https://image.winudf.com/v2/image1/Y29tLnJobXNvZnQuZWRpdF9pY29uXzE1ODc4OTQ3MTFfMDAw/icon.png?w=100&fakeurl= "
         
       },
       
             {
-        "name": "jio moded",
-        "p_name": "jio.com",
-        "f_name": "GTV.apk",
-        "m_info":"unlock",
-        "m_by": "udpf",
-        "info": "detail here",
-        "m_date":"unlock",
-        "version":"replace",
-        "img": "gdimg.php?s=008080_F_130_90&t=GTV"
+        "name": "UC Browser",
+        "p_name": "uc9 browser9.4",
+        "f_name": "uc9 browser9.4.jar",
+        "m_info":"Original application",
+        "m_by": "",
+        "a_info": "Jarlast update of jar application.\n Use to browse internet.",
+        "m_date":"1/05/2020",
+         "a_type":"jar",
+        "number":"1",
+        "version":"9.6",
+        "img": " "
+        
       }
+      
+
 ],
 
 "country": {
