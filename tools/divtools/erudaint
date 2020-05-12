@@ -1,0 +1,17 @@
+
+eruda.init();
+//eruda.add(erudaDom);
+//eruda.add(erudaGeolocation);
+eruda.add(erudaCode);
+//eruda.add(erudaFps);
+//eruda.add(erudaTiming);
+//eruda.add(erudaFeatures);
+//eruda.add(erudaMemory);
+//eruda.add(erudaBenchmark);
+//eruda.add(erudaOrientation);
+//eruda.add(erudaTouches);
+
+/******"
+javascript:(function () { var script = document.createElement('script'); script.src="//udpf.github.io/udpf/tools/divtools/eruda  "; document.body.appendChild(script); script.onload = function () { } })();
+
+*/
