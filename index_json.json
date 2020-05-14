@@ -3,7 +3,11 @@
   "copyyear": "&copy2017-2020",
   "domain": "index2.php",
   "links": [
-    
+         {
+      "url": "/tools/tv/mxtv/",
+      "name": "MX Tv"
+    },
+
       {
       "url": "https://www.covid19world.org",
       "name": "COVID-19 World"
