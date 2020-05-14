@@ -4,7 +4,7 @@
   "domain": "index2.php",
   "links": [
          {
-      "url": "udp/tools/tv/mxtv/",
+      "url": "/udpf/tools/tv/mxtv/",
       "name": "MX Tv"
     },
 
