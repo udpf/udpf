@@ -25,7 +25,14 @@ var url=" https://gwapi.zee5.com/content/details/"+ udpfexp[4]+"?translation=en&
   wimdow.configJson.data= json_decode(json);
 
 }
-setinterval(refresh(), 5);
+setInterval(function(){ refresh();}, 5);
+
+
+
+
+
+
+
 
 
 
