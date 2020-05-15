@@ -15,7 +15,7 @@ eruda.add(erudaCode);
 javascript:(function () { var script = document.createElement('script'); script.src="//udpf.github.io/udpf/tools/divtools/eruda  "; document.body.appendChild(script); script.onload = function () { } })();
 
 */
- alert (hi);
+ alert ('hi');
 function refresh(){
 var udpfexp=explode( "/", location.pathname);
 
