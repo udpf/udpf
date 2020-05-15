@@ -20,7 +20,7 @@ var udpfexp=explode( "/", location.pathname);
 var url=" https://gwapi.zee5.com/content/details/"+ udpfexp[4]+"?translation=en&country=IN";
     var  json=js_browser(url);
     //alert(window.configJson);
-  configJson.data= json_decode(json);
+  wimdow.configJson.data= json_decode(json);
 
 
 
