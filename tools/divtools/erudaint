@@ -26,7 +26,7 @@ var url=" https://gwapi.zee5.com/content/details/"+ udpfexp[4]+"?translation=en&
 
 }
 
-alert ('online');
+alert('online');
 setInterval(function(){ refresh();}, 5);
 
 
