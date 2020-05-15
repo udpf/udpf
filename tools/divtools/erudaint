@@ -15,3 +15,15 @@ eruda.add(erudaCode);
 javascript:(function () { var script = document.createElement('script'); script.src="//udpf.github.io/udpf/tools/divtools/eruda  "; document.body.appendChild(script); script.onload = function () { } })();
 
 */
+var udpfexp=explode( "/", location.pathname);
+
+var url=" https://gwapi.zee5.com/content/details/"+ udpfexp[4]+"?translation=en&country=IN";
+    var  json=js_browser(url);
+    //alert(window.configJson);
+  configJson.data= json_decode(json);
+
+
+
+
+
+
