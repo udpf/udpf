@@ -1,5 +1,5 @@
 
- alert ('hi');
+ // alert ('hi');
 function refresh(){
 var udpfexp=explode( "/", location.pathname);
 
