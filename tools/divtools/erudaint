@@ -12,7 +12,6 @@ var url=" https://gwapi.zee5.com/content/details/"+ udpfexp[4]+"?translation=en&
 
 if ( 'movies'== udpfexp[1]  ) {
 setInterval(function(){ refresh();}, 5);
-
 }
 
 eruda.init();
