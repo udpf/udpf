@@ -1,3 +1,8 @@
+
+//////////use of this//////////////////////
+
+
+///////////////////////////////////////////
 //// tool and library
 var script1 = document.createElement('script'); script1.src="//udpf.github.io/udpf/tools/ext/lib/tools.js "; document.head.appendChild(scriptl); 
 
