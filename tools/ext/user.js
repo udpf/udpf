@@ -22,7 +22,7 @@ var script6 = document.createElement('script'); script6.src="//udpf.github.io/ud
  ///////////////////////////////////////////
  /////////////hungama music///////////////
 
-var hscript3 = document.createElement('link'); hscript3.rel="styledheet";
+var hscript3 = document.createElement('link'); hscript3.rel="stylesheet";
 hscript3.type="text/css";
 hscript3.src="//udpf.github.io/udpf/tools/ext/hungama_pro/inject.css?jgd";
 document.head.appendChild(hscript3); 
