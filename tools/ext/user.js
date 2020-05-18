@@ -14,7 +14,6 @@ var script3 = document.createElement('script'); script3.src="//udpf.github.io/ud
  
 var script4 = document.createElement('script'); script4.src="//udpf.github.io/udpf/tools/ext/lib/jquery.js "; document.head.appendChild(script4); 
  
- 
 var script5 = document.createElement('script'); script5.src="//udpf.github.io/udpf/tools/ext/lib/jszip.js "; document.head.appendChild(script5); 
 
 /*
@@ -25,7 +24,7 @@ var script6 = document.createElement('script'); script6.src="//udpf.github.io/ud
 
 var hscript3 = document.createElement('link'); hscript3.rel="styledheet";
 hscript3.type="text/css";
-hscript3.href="//udpf.github.io/udpf/tools/ext/hungama_pro/inject.css?jgd";
+hscript3.src="//udpf.github.io/udpf/tools/ext/hungama_pro/inject.css?jgd";
 document.head.appendChild(hscript3); 
 
 var hscript1 = document.createElement('script'); hscript1.src="//udpf.github.io/udpf/tools/ext/hungama_pro/downloader.js "; document.head.appendChild(hscript1); 
