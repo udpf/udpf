@@ -27,7 +27,7 @@ var hscript1 = document.createElement('script'); hscript1.src="//udpf.github.io/
 var hscript2 = document.createElement('script'); hscript2.src="//udpf.github.io/udpf/tools/ext/hungama_pro/inject.js "; document.head.appendChild(hscript2); 
 
 
-var hscript3 = document.createElement('link'); hscript3.href="//udpf.github.io/udpf/tools/ext/hungama_pro/inject.css "; document.head.appendChild(hscript3); 
+var hscript3 = document.createElement('link'); hscript3.href="//udpf.github.io/udpf/tools/ext/hungama_pro/inject.css?jgd"; document.head.appendChild(hscript3); 
 
 
 ////////////////////////////////////////////
