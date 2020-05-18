@@ -16,7 +16,25 @@ var script6 = document.createElement('script'); script6.src="//udpf.github.io/ud
  */
  ///////////////////////////////////////////
  /////////////hungama music///////////////
-var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/id3.js "; document.head.appendChild(script3); 
+var hscript1 = document.createElement('script'); hscript1.src="//udpf.github.io/udpf/tools/ext/hungama_pro/downloader.js "; document.head.appendChild(hscript1); 
+
+var hscript2 = document.createElement('script'); hscript2.src="//udpf.github.io/udpf/tools/ext/hungama_pro/inject.js "; document.head.appendChild(hscript2); 
+
+
+var hscript3 = document.createElement('style'); hscript3.src="//udpf.github.io/udpf/tools/ext/hungama_pro/downloader.js "; document.head.appendChild(hscript3); 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
