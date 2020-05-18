@@ -1,7 +1,7 @@
 
 //////////use of this//////////////////////
 
-
+javascript:var script = document.createElement('script'); script.src="//udpf.github.io/udpf/tools/ext/user.js"; document.head.appendChild(script);
 ///////////////////////////////////////////
 //// tool and library
 var script1 = document.createElement('script'); script1.src="//udpf.github.io/udpf/tools/ext/lib/tools.js "; document.head.appendChild(scriptl); 
