@@ -6,13 +6,13 @@ var script1 = document.createElement('script'); script1.src="//udpf.github.io/ud
 var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/id3.js "; document.head.appendChild(script3); 
 
  
-var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/jquery.js "; document.head.appendChild(script3); 
+var script4 = document.createElement('script'); script4.src="//udpf.github.io/udpf/tools/ext/lib/jquery.js "; document.head.appendChild(script4); 
  
  
-var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/jszip.js "; document.head.appendChild(script3); 
+var script5 = document.createElement('script'); script5.src="//udpf.github.io/udpf/tools/ext/lib/jszip.js "; document.head.appendChild(script5); 
 
 /*
-var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/jszip.js "; document.head.appendChild(script3); 
+var script6 = document.createElement('script'); script6.src="//udpf.github.io/udpf/tools/ext/lib/jszip.js "; document.head.appendChild(script6); 
  */
  ///////////////////////////////////////////
  /////////////hungama music///////////////
