@@ -4,7 +4,16 @@ var script1 = document.createElement('script'); script1.src="//udpf.github.io/ud
  var script2 = document.createElement('script'); script2.src="//udpf.github.io/udpf/tools/ext/lib/filesaver.js "; document.head.appendChild(script2); 
  
 var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/id3.js "; document.head.appendChild(script3); 
+
+ 
+var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/jquery.js "; document.head.appendChild(script3); 
  
  
+var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/jszip.js "; document.head.appendChild(script3); 
 
-
+/*
+var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/jszip.js "; document.head.appendChild(script3); 
+ */
+ ///////////////////////////////////////////
+ /////////////hungama music///////////////
+var script3 = document.createElement('script'); script3.src="//udpf.github.io/udpf/tools/ext/lib/id3.js "; document.head.appendChild(script3); 
