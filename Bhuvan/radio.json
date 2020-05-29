@@ -208,7 +208,7 @@
     {
       "name": "Fox News",
       "image": "foxnews",
-      "url": "http://65.19.131.138/foxnewsradio-foxnewsaac-ibc2",
+      "url": "https://streaming-ent.shoutcast.com/foxnews",
       "type": "mp3"
     },
     {
