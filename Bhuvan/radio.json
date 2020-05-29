@@ -238,7 +238,7 @@
     {
       "name": "Big FM Kolkata",
       "image": "bf",
-      "url": "http://gir.videocdn.scaleengine.net/gir-live/play//mp4:gir-kol05/playlist.m3u8",
+      "url": "https://radioindia.net/radio/sc-bb/icecast.audio",
       "type": "mp3"
     },
     {
