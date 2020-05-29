@@ -4,7 +4,7 @@
   "imageurl": "http://bhuvankumarthakur.co.nf/playlists/tvchannels/logoicon/",
   "items": [
      {
-      "name":"times now",
+      "name":"Times Now",
       "image":"timesnow",
       "url": "https://timesnow-lh.akamaihd.net/i/TNA_1@129288/index_100_a-b.m3u8?sd=10&rebase=on;",
       "type": "mp3"
