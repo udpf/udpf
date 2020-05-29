@@ -4,8 +4,8 @@
   "imageurl": "http://bhuvankumarthakur.co.nf/playlists/tvchannels/logoicon/",
   "items": [
      {
-      "name":"Mukesh",
-      "image":"mukesh",
+      "name":"times now",
+      "image":"timesnow",
       "url": "http://prclive1.listenon.in:9308/;",
       "type": "mp3"
     },      
