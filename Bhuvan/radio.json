@@ -172,7 +172,7 @@
     {
       "name": "Sama Karachi FM",
       "image": "skf",
-      "url": "http://audio.samaafm.com:8010/;stream.nsv",
+      "url": "http://audio.samaafm.com:8876/stream/1/",
       "type": "mp3"
     },
     {
