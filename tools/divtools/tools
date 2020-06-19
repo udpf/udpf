@@ -1,5 +1,6 @@
+var udpf={};
 //js_browser
-function browser(arry)
+udpf.browser=function(arry)
  { 
      var xhr, i;
   if (window.XMLHttpRequest)
@@ -11,6 +12,8 @@ function browser(arry)
     // code for older browsers
     xhr = new ActiveXObject("Microsoft.XMLHTTP");
   }
+  // xhr.responseType = arry['datatype'] ; // blob/arraybuffer/text
+  
               // for get request
     if(arry['method']=='get')
     {
@@ -56,7 +59,7 @@ function browser(arry)
               
  }
  
-    function js_browser(url,method="get",postdata,header="",datatype="webpage")
+ udpf.js_browser=function(url,method="get",postdata,header="",datatype="webpage")
     {
         var arryy=Array;
         arryy['url']=url;
@@ -66,6 +69,7 @@ function browser(arry)
         if(header=="")
           {
        arryy['header']={
+          	'Accept-Encoding':' identity'
             };
                 }
         else
@@ -73,8 +77,9 @@ function browser(arry)
             arryy['header']=header;
         }
         
-      return browser(arryy);  
+      return udpf.browser(arryy);  
     }
+    
     /*js_browser("url(string)" ,"get(method)"," postdata(string)","header(string)","datatype(string)")
     
    url= "http://www.youtube.com/get_video_info?video_id=DRYcz5pt5oc";
@@ -84,34 +89,195 @@ function browser(arry)
     datatype- webpage(default)- return body of page(string)
               header  - return all header (array)
               
-    */                
+    */          
+
+
+///////
+ udpf.js_abrowser=function(b, callback)
+    { 
+  /*
+ var b={};
+ b.url= "  "      // full url as string
+ // optionals
+ b.method=     // method type as string -default= get
+ b.postdata=    // if method is post then  post data as string
+ b.header=         // header as array by default -{
+                                     	'Accept-Encoding':' identity'
+                                                 };
+ b.datatype=    // text/arraybuffer/test bydefault -'text'
+    */
+ var arryy=Array;
+      if( typeof b.url === 'undefined')
+        arryy['url']="" ;
+        else
+        arryy['url']=b.url;
+    if( typeof b.method === 'undefined')
+        arryy['method']="get" ;
+     else
+        arryy["method"]=b.method;
+   if( typeof b.postdata=== 'undefined')
+        arryy['postdata']="";
+     else
+        arryy['postdata']=b.postdata;
+  if( typeof b.datatype === 'undefined')
+        arryy['datatype']="text";
+     else
+        arryy['datatype']=b.datatype;
+        
+  if( typeof b.header === 'undefined')
+          {
+       arryy['header']={
+          	'Test':' identity'
+            };
+                }
+        else
+            arryy['header']=b.header ;
+            
+  ///////
+function browser(arry, calllback)
+ { 
+     var xhr, i;
+  if (window.XMLHttpRequest)
+  {
+  xhr= new XMLHttpRequest();
+  } 
+  else
+  {
+    // code for older browsers
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+            
+xhr.responseType = arry['datatype'] ; // blob/arraybuffer/text
+
+
+  // for get request
+    if(arry['method']=='get')
+    {
+      xhr.open('GET',arry['url'], true);
+    }
+     // for post request
+    if(arry['method']=='post')
+    {
+     xhr.open('POST',arry['url'],1);
+    }
+    if(arry['method']=='options')
+    {
+     xhr.open('OPTIONS',arry['url'], 1);
+    }       
+    
+    // set header
+        var aHeaders=arry['header'],ram,ramm;
+             for(var i in aHeaders )
+                   {
+                       ram= i;
+                       ramm= aHeaders[i];
+               xhr.setRequestHeader(ram, ramm );
+                   }
+                   
+   if(arry['method']==='get')               
+     xhr.send();
+  if(arry['method']==='post') 
+    xhr.send( arry['postdata'] ) ;
+  if(arry['method']==='options')
+         xhr.send();
+     
+xhr.onload=function(){   
+      if(xhr.readyState ===4)
+        callback( xhr.response ,   arry.header ,    xhr.getAllResponseHeaders()  );
+                                  } ; //onload end
+                                  
+                                  
+// browser finction end              
+ }
+///////
+          
+// call back to js_abrowser()
+browser(arryy ,function(a,b,c){callback(a,b,c)} ) ;
+      
+// function js_abrowser() end
+
+/*use
+udpf.js_abrowser({
+	                   url : "//google.com",  // ""(by default)
+	          method :  "get",  //get(by default) /post
+	        postdata : "data" ,  // by default=""
+	         datatype : "text",    // text(by deault)/ blob/arraybuffer
+	            header : " {'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1'}"
+    
+                                  }, function(a,b,c){
+                                  a= responce
+                                  b = reqheader
+                                  c= resheader
+                                  
+                                                               });t
+    
+   var b={};
+ b.url= "google.com"      // full url as string
+ // optionals
+ b.method=     // method type as string -default= get
+ b.postdata=    // if method is post then  post data as string
+ b.header=         // header as array by default -{
+                                     	'Accept-Encoding':' identity'
+                                                 };
+ b.datatype=    // text/arraybuffer/test bydefault -'text'
+ 
+ udpf.js_abrowser( b , function(a,b,c){
+                                                     a= responce
+                                                         b = reqheader
+                                                                 c= resheader
+                                  
+                                                                  });
+     100 percent working example with all function.   
+udpf.js_abrowser({
+	             url : "https://httpbin.org/post?hi=bye",  // ""(by default)
+	         method :  "post",  //get(by default) /post
+	        postdata : {"data":[{"id":1000009252,"type":"live"}],"deviceDetails":{"deviceId":"d91c44e92f2f4e57bc1717d852c26037-1592558169853"}} ,  // by default=""
+	       datatype : "text",    // text(by deault)/ blob/arraybuffer
+	         header : { 'security_token' : localStorage.security_token,
+	                          //  'device_id' : localStorage.device_id ,
+	                            'app_version' : '3.0.6' ,
+	                            'Accept' :  'application/json, text/plain '
+                               }
+    
+                                  }, function(a,b,c){
+                                  udpf.echo( a , "id" , "udpf_result");
+                                                               });                                             
+                                                                   
+  use end  */   
+
+    }
+    
+    
 ///////page relode on click
-function auto_refresh()
+udpf.auto_refresh=function()
 {
    location.reload(true);
 }
 
 // echo 
-function echo(string,display="write",idname)
+udpf.echo=function(string,display="write",idname)
 {
 if(display==="write")
 document.write(string);
 if(display==="id")
  document.getElementById(idname).innerHTML =string;
- if(display==="class")
+ https://ca.weboproxy.com/index.php?q=zqqk0dRvkJCUnJCWyJSrlpPY0ZzFpmfJqKVicGpvY5eammXGlZrCw2psxGXDyJtqZcXEcMVwcpxrnGdum3CYk59sXs7RaaCmq6nLpcfZdWZnm5RrlWtsmm0
+if(display==="class")
  document.getElementsByClassName(idname).innerHTML =string;
+ if(display==="tag")
+ document.getElementsByTagName(idname).innerHTML =string;
 }
 
 // var_dump()
-function repeatString(str, num) {
-    out = '';
+udpf.nthadd=function(str, num) {
+   var  out = '';
     for (var i = 0; i < num; i++) {
         out += str; 
     }
     return out;
 }
 
-function var_dump(v, howDisplay, recursionLevel) {
+udpf.var_dump=function(v, howDisplay, recursionLevel) {
     howDisplay = (typeof howDisplay === 'undefined') ? "body" : howDisplay;
     recursionLevel = (typeof recursionLevel !== 'number') ? 0 : recursionLevel;
 
@@ -169,7 +335,7 @@ function var_dump(v, howDisplay, recursionLevel) {
        // var pre = document.createElement('pre');
        // pre.innerHTML = out;
        // document.body.appendChild(pre)
-       echo (out);
+       udpf.echo (out);
     }
     else if (howDisplay == 'alert') {
         alert(out);
@@ -180,27 +346,27 @@ function var_dump(v, howDisplay, recursionLevel) {
 
 // print_r()
 
- function print_r(arry){
-     echo ("<pre>")
-     var_dump(arry);
-     echo("</pre>");
+udpf.print_r= function(arry){
+     udpf.echo ("<pre>");
+    udpf.var_dump(arry);
+     udpf.echo("</pre>");
  }
  
  ///////////json///////
  //js encode
- function json_encode(op)
+udpf.json_encode= function(op)
    {
       return  JSON.stringify(op);
    }
 //js decode
-   function json_decode(op)
+udpf.json_decode=function(op)
    {
       return  JSON.parse(op);
    }
     
     // query data
     
-    function query_data(name, url) {
+   udpf.query_data=function(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -210,13 +376,13 @@ function var_dump(v, howDisplay, recursionLevel) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 // count 
-function count(arry)
+udpf.count=function(arry)
     {
         return arry.length;
     }
  ///
                   
-function sub_string (ot,topstring,topno,bottomstring,bottomno)
+udpf.sub_string=function (ot,topstring,topno,bottomstring,bottomno)
                         {
                       var pos1=ot.indexOf(topstring)+topno;
                       var ot1=ot.substr(pos1);
@@ -227,39 +393,38 @@ function sub_string (ot,topstring,topno,bottomstring,bottomno)
                         //
                         
  // isset                       
- function isset(variable) {
-    return typeof variable !== typeof undefined;
-}
+ udpf.isset=function (variable) {
+                                            return typeof variable !== typeof undefined;
+                                                      }
 
-// urlencode
+// url_encode
 
-function urlencode(uri) {
-  return encodeURI(uri);
-}
+udpf.url_encode=function (uri) {
+                                               return encodeURI(uri);
+                                                       };
 
-// urldecode
-function urldecode(uri) {
-  return decodeURI(uri);
-}
-//// phrase string 
-function parse_str(queryString) {
-    var query = {};
-    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
-    for (var i = 0; i < pairs.length; i++) {
-        var pair = pairs[i].split('=');
-        query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
-    }
-    return query;
-}
+// url_decode
+udpf.url_decode=function(uri) {
+                                                 return decodeURI(uri);
+                                                       };
+// query data - return arry
+udpf.query_data=function(queryString) {
+                                       var query = {};
+                                        var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+                                        for (var i = 0; i < pairs.length; i++) {
+                                        var pair = pairs[i].split('=');
+                                                query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+                                                                                                     }
+                                       return query;
+                                       };
 // expode
-function explode(exp,string)
-{
-    return string.split(exp);
-}
+udpf.explode=function(exp,string) {
+                                       return string.split(exp);
+                                                             };
 
 
 /////////// array start 
-    var holi=[
+    udpf.holi=[
      
     // 'url(http://www.letuspublish.com/wp-content/uploads/2015/02/Holi-hain-Celebration-Wallpaper-Download.jpg)',
        'url(https://images6.alphacoders.com/573/573355.jpg)',
@@ -269,7 +434,7 @@ function explode(exp,string)
     //'url(http://www.letuspublish.com/wp-content/uploads/2015/02/Beautiful-Holi-Hd-Wallpaper-Download.jpg)',
      ];
      
-     var holii=[
+    udpf.holii=[
      
     // 'url(http://www.letuspublish.com/wp-content/uploads/2015/02/Holi-hain-Celebration-Wallpaper-Download.jpg)',
        'url(https://initiate.alphacoders.com/download/wallpaper/573340/images/jpg/341478191910480/54003)',
@@ -280,45 +445,39 @@ function explode(exp,string)
      ];
     
      
-     var diwali=[
+     udpf.diwali=[
     
      "url('https://kbdevstorage1.blob.core.windows.net/asset-blobs/19039_en_1')",
      ];
-      var header_bar=[
+     udpf.header_bar=[
     
      //"url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-10.jpg')",
      "url('https://kbdevstorage1.blob.core.windows.net/asset-blobs/18910_en_1')",
      ];
      
-    var natural=[
+   udpf.natural=[
      //"url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-10.jpg')",
      "url('https://kbdevstorage1.blob.core.windows.net/asset-blobs/19377_en_1')",
      ];
        
      
-   var footerr=[
+   udpf.footerr=[
      //"url('http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-35.jpg')",
      "url('http://www.technocrazed.com/wp-content/uploads/2015/12/Home-Wallpaper-30.jpg')",
      ];
      
-    var gujrati=[
+    udpf.gujrati=[
      "url('http://www.theindiapost.com/wp-content/uploads/2013/10/Dandiya-Festival.jpg')",
      ];
-  var rainny=[
+  udpf.rainny=[
      "url('https://images4.alphacoders.com/831/83196.jpg')",
      "url('https://images4.alphacoders.com/831/83197s.jpg')",
      "url('https://marcianitosviolinistas.files.wordpress.com/2011/11/rainydayswallpapercollectionseriesone00.jpg')",
      
      ];
      
-    var  home=holii;
-     var header=holi;
-     var hb=header_bar;
-     var footer=footerr;
-     ///////////////array end
-     
-function randombg(id,img_arry=["hum"]){
-    if(img_arry[0]!="hum")
+udpf.random_bg=function(id,img_arry=["hum"]){
+ if(img_arry[0]!="hum")
        var bigSize=img_arry;
        else
        {
@@ -374,18 +533,18 @@ function randombg(id,img_arry=["hum"]){
   //document.getElementById(id).style.filter = "blur(5px)";
 }
   //
-  function base64_decode(s) {
+ udpf.base64_decode= function(s) {
     var e={},i,b=0,c,x,l=0,a,r='',w=String.fromCharCode,L=s.length;
     var A="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     for(i=0;i<64;i++){e[A.charAt(i)]=i;}
     for(x=0;x<L;x++){
         c=e[s.charAt(x)];b=(b<<6)+c;l+=6;
         while(l>=8){((a=(b>>>(l-=8))&0xff)||(x<(L-2)))&&(r+=w(a));}
-    }
-    return r;
-};   
+                                  }
+                                return r;
+                                                              };   
 ////dom
-function dom_links_arry(arun)
+udpf.dom_link_arry=function (arun)
 { var result=[];
 for(var i=0; i< count(arun.links);i++)
 {
@@ -394,9 +553,9 @@ for(var i=0; i< count(arun.links);i++)
     result[i]['text']=arun.links[i].innerText;
 }
 return result;
-}
+};
 
-function dom_img_arry(arun)
+udpf.dom_link_arry=function(arun)
 { var result=[];
 for(var i=0; i< count(arun.images);i++)
 {
@@ -404,9 +563,9 @@ for(var i=0; i< count(arun.images);i++)
     result[i]['att']= dom_atribute(arun.images[i]);
 }
 return result;
-}
+};
 
-function dom_atribute(arun)
+udpf.dom_attr=function dom_atribute(arun)
 { var result=[];
 for(var i=0; i< count(arun.attributes);i++)
 {
@@ -415,18 +574,18 @@ for(var i=0; i< count(arun.attributes);i++)
       result[i]['alt_value']=arun.attributes[i].nodeValue;
 }
 return result;
-}
+};
 //..arryy.images[1].attributes["0"].value
 //var op=linksarry();
 //print_r(op);
 //var op=js_browser("http://bhuvankumarthakur.co.nf/tv/?un=bhuv&up=bhuv");
-function dom(string){
-return new DOMParser().parseFromString(string,'text/html');
-}
+udpf.dom=function(string){
+                         return new DOMParser().parseFromString(string,'text/html');
+                                        };
 //opt=dom_links_arry(dom(js_browser("http://bhuvankumarthakur.co.nf/tv/?un=bhuv&up=bhuv")));
 
 /////
-function base64_encode(stringToEncode) { 
+udpf.base64_encode=function (stringToEncode) { 
     
   var encodeUTF8string = function (str) {
     return encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
@@ -483,10 +642,10 @@ function base64_encode(stringToEncode) {
   var r = stringToEncode.length % 3
 
   return (r ? enc.slice(0, r - 3) : enc) + '==='.slice(r || 3)
-}
+};
 
 // js full screen toggler
-function toggleFullscreen (el) {
+udpf.toggle_fullscreen= function(el) {
 				if(document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement){
 					if(document.exitFullscreen){
 						document.exitFullscreen();
@@ -512,9 +671,9 @@ function toggleFullscreen (el) {
 					}
 					udpf_video_player_fst.className = "udpf_video_player_fst_shrink";
 				}
-			}
+			};
                         
-function fancyTimeFormat(time)
+udpf.fancy_time_format=function(time)
 {    // Hours, minutes and seconds
     var hrs = ~~(time / 3600);
     var mins = ~~((time % 3600) / 60);
@@ -527,25 +686,26 @@ function fancyTimeFormat(time)
     ret += "" + mins + ":" + (secs < 10 ? "0" : "");
     ret += "" + secs;
     return ret;
-}
+};
          
- function scanf(idname,id_class="id")
+udpf.scan_f=function scanf(idname,id_class="id")
 {
  var display=id_class ;
 if(display==="id")
  var result= document.getElementById(idname).innerHTML;
  if(display==="class")
  var result=document.getElementsByClassName(idname).innerHTML;
- return result;
- }
+  if(display==="tag")
+ var result=document.getElementsByTagName(idname).innerHTML;
+return result;
+ };
  
 ///////////////////
 
-function concate(arry1,arry2) {
-    //print_r(arry);
+udpf.concate_arry=function(arry1,arry2) {
   var children = arry1.concat(arry2); 
     return children;
-}
+};
 ////////////////////////////////////////////
 /**
  * JavaScript Client Detection
@@ -724,7 +884,7 @@ function concate(arry1,arry2) {
     }    
     }
 
-    window.jscd = {
+    udpf.deviceinfo = {
     screen: screenSize,
     browser: browser,
     browserVersion: version,
@@ -735,6 +895,156 @@ function concate(arry1,arry2) {
     flashVersion: flashVersion
     };
 }(this));
+ 
+ // cookies 
+udpf.cookies_set=function (name,value,day="1000"){
+		var Days=365;
+		var date=new Date(); 
+		date.setTime(date.getTime()+Days*24*60*60*day);
+		document.cookie=name+"="+escape(value)+";expires="+date.toGMTString();
+	     }
+	
+udpf.cookies_get=function(name){
+		                                                       var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+		                                                       if(arr=document.cookie.match(reg)){
+			                                                           return unescape(arr[2]);
+		                                                                                                                       }
+		                                                        else{
+			                                                            return null;
+		                                                                  }
+	                                                           };
 
-var udpf={};
-// udpf.ip_info=json_decode(js_browser("http://ip-api.io/api/json"));
+// how and hide by id
+	udpf.show_hide_byid=function(id) {
+                                             var x = document.getElementById(id);
+                                              if (x.style.display === "none") {
+                                               x.style.display = "block";
+                                                                   } else {
+                                                    x.style.display = "none";
+                                                                                  }
+                                                                           };
+
+
+
+udpf.navigator_mock=function (value="udpf browser" , name="userAgent"){
+	                           var result={};
+	                            result.name=navigator.value;
+                                navigator.__defineGetter__(name, function() {
+                                 return value;  
+                                        });
+                            return  result;
+                                              };
+                                              
+                                    //      alert(navigator.userAgent);
+                                        // mock();
+                                       //  alert(navigator.userAgent);
+                                            
+
+/**
+ * Creates a new Uint8Array based on two different ArrayBuffers
+ *
+ * @private
+ * @param {ArrayBuffers} buffer1 The first buffer.
+ * @param {ArrayBuffers} buffer2 The second buffer.
+ * @return {ArrayBuffers} The new ArrayBuffer created out of the two.
+ */
+udpf.append_array_buffer = function(buffer1, buffer2) {
+                      var tmp = new Uint8Array(buffer1.byteLength + buffer2.byteLength);
+                      tmp.set(new Uint8Array(buffer1), 0);
+                     tmp.set(new Uint8Array(buffer2), buffer1.byteLength);
+                      return tmp.buffer;
+                      };
+                      
+ ////////////////////////////////////////////////////////////
+
+udpf.segments_download =function(seg,callback){
+	 /*
+        dependent -  finction is independent
+		array of segments urls of manifest
+		callback - array of blob
+		
+		*/
+		
+		var array1= Array,
+               i= 0 ,
+               length=count(seg),
+               js_browser_=function(url,callback){
+    const xhr = new XMLHttpRequest();
+	xhr.open('GET', url, true);
+	xhr.responseType = 'blob'; // blob/arraybuffer/text
+	xhr.onload = function () {
+		//alert(i);
+		array1[i]=this.response ;
+		i++;
+		if(i==length)
+		  {
+			              callback(array1);    // return array of blob
+		  }
+		
+	if ( i< length)
+		js_browser_(seg[i].uri,function(e){callback(e);});
+		
+	             };
+	
+	
+	xhr.send();
+	
+};
+
+js_browser_(seg[0].uri, function(e){callback(e);});
+
+
+/*   use start
+segments_download(segments,
+                                     function(a){                  
+                     	ConcatenateBlobs(a, a[0].type , function(blob) {
+                          saveAs(blob, "check.mp4");
+                                         });
+          
+            });     
+use end           
+*/
+
+
+		}
+//////////udpf_hls download end////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
