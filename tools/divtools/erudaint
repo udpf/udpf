@@ -1,12 +1,6 @@
 
  // alert ('hi');
 function refresh(){
-var udpfexp=explode( "/", location.pathname);
-
-var url=" https://gwapi.zee5.com/content/details/"+ udpfexp[4]+"?translation=en&country=IN";
-    var  json=js_browser(url);
-    //alert(window.configJson);
-  configJson.data= json_decode(json);
 
 }
 var udpfexp=explode( "/", location.pathname);
