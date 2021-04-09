@@ -52,19 +52,19 @@
     {
       "name": "Bhojpuriya fm",
       "image": "bhojpuriyafm",
-      "url": "http://streaming.softnep.net:8143/;stream.nsv;",
+      "url": "http://streaming.softnep.net:8143/",
       "type": "mp3"
     },
     {
       "name": "radio rudraksh",
       "image": "rr",
-      "url": "https://streaming.softnep.net:10873/;stream.nsv",
+      "url": "https://streaming.softnep.net:10873/;",
       "type": "mp3"
     },
     {
       "name": "radio bhurukwa",
       "image": "rb",
-      "url": "http://live.itechnepal.com:8374/stream?type=.mp3",
+      "url": "http://live.itechnepal.com:8374/stream",
       "type": "mp3"
     },
     {
@@ -76,7 +76,7 @@
     {
       "name": "Radio Mithila",
       "image": "rm",
-      "url": "http://streaming.hamropatro.com:8246/;stream.mp3;",
+      "url": "http://streaming.hamropatro.com:8246/;",
       "type": "mp3"
     },
     {
