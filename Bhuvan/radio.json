@@ -52,7 +52,7 @@
     {
       "name": "Bhojpuriya fm",
       "image": "bhojpuriyafm",
-      "url": "http://streaming.softnep.net:8143/",
+      "url": "http://streaming.softnep.net:8143/;",
       "type": "mp3"
     },
     {
