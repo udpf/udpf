@@ -52,13 +52,13 @@
     {
       "name": "Bhojpuriya fm",
       "image": "bhojpuriyafm",
-      "url": "http://streaming.softnep.net:8143/;stream.nsv&type=mp3&volume=60;",
+      "url": "http://streaming.softnep.net:8143/;stream.nsv;",
       "type": "mp3"
     },
     {
       "name": "radio rudraksh",
       "image": "rr",
-      "url": "https://streaming.softnep.net:10873/;stream.nsv&type=mp3&volume=50",
+      "url": "https://streaming.softnep.net:10873/;stream.nsv",
       "type": "mp3"
     },
     {
