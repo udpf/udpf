@@ -50,21 +50,21 @@
       "type": "mp3"
     },
     {
-      "name": "My radio",
-      "image": "tv",
-      "url": "http://78.129.190.50:38192/;",
+      "name": "Bhojpuriya fm",
+      "image": "bhojpuriyafm",
+      "url": "http://streaming.softnep.net:8143/;stream.nsv&type=mp3&volume=60;",
       "type": "mp3"
     },
     {
       "name": "radio rudraksh",
       "image": "rr",
-      "url": "http://38.107.242.90:8114/;",
+      "url": "https://streaming.softnep.net:10873/;stream.nsv&type=mp3&volume=50",
       "type": "mp3"
     },
     {
       "name": "radio bhurukwa",
       "image": "rb",
-      "url": "http://live.itechnepal.com:8374/stream",
+      "url": "http://live.itechnepal.com:8374/stream?type=.mp3",
       "type": "mp3"
     },
     {
@@ -76,7 +76,7 @@
     {
       "name": "Radio Mithila",
       "image": "rm",
-      "url": "http://streaming.hamropatro.com:8244/;",
+      "url": "http://streaming.hamropatro.com:8246/;stream.mp3;",
       "type": "mp3"
     },
     {
@@ -86,9 +86,9 @@
       "type": "mp3"
     },
     {
-      "name": "Vividh Bharati",
-      "image": "VividhBharati",
-      "url": "http://airlive.nic.in/hls-live/livepkgr/_definst_/vividhbharti.m3u8",
+      "name": "mithilanchal fm",
+      "image": "mithilanchalfm",
+      "url": "https://live.itech.host:8645/stream",
       "type": "mp3"
     },
     {
